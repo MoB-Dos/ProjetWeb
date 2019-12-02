@@ -1,6 +1,9 @@
-<?php
-/* bon je test un mot de passe crypter*/
-<form action="crypt.php" method="get">
+<!DOCTYPE html>
+<html>
+<head>
+bon je test un mot de passe crypter
+<form action="inscription.php" method="get">
+</head>
         <input type="text" name="mot" /><br />
     <input type="submit" value="Crypter" />
 </form>
@@ -13,3 +16,4 @@ if(isset($_GET['mot']))
 <?php
 }
  ?>
+</html>
