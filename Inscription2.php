@@ -17,7 +17,7 @@ catch(Exception $e){
   die('Erreur:'.$e->getMessage());
 }
 
-$req = $bdd->prepare('insert into utilisateur (nom, prenom, mail, tel, adresse, classe, profil_id, mdp) value(?,?,?,?,?,?,?,?)');
+$req = $bdd->prepare('insert into utilisateur (nom, prenom, mail, tel, adresse, classe, profil_id, mdp) values(?,?,?,?,?,?,?,?)');
 $req -> execute(array($nom, $prenom, $mail, $tel, $adresse, $classe, $profil_id, $mdp));
 //header("location:Connexion.php");
 var_dump($nom,$prenom,$mail,$tel,$adresse,$classe,$profil_id,$mdp);
