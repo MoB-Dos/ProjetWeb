@@ -7,7 +7,7 @@ $tel=$_POST['tel'];
 $adresse=$_POST['adresse'];
 $classe=$_POST['classe'];
 $profil_id=$_POST['profil_id'];
-$mdp=$_POST['mdp'];
+$mdp=md5($_POST['mdp']);
 
 try{
 $bdd= new PDO('mysql:host=localhost;dbname=projetweb;charset=utf8','root','');
