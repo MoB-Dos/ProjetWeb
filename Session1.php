@@ -15,9 +15,9 @@ $donne=$reponse->fetchall();
 
 foreach ($donne as $value) {
 
-  if (isset($_POST['login']) && isset(md5($_POST['mdp']))) {
+  if (isset($_POST['login']) && isset($_POST['mdp'])) {
 
-    if ($value['nom'] == $_POST['login'] && $value['mdp'] == $_POST['mdp']) {
+    if ($value['nom'] == $_POST['login'] && $value['mdp'] == md5($_POST['mdp'])) {
 
       $_SESSION['login'] = $_POST['login'];
 
