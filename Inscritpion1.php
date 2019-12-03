@@ -8,36 +8,37 @@
 			<input type="text" name="prenom" required/><br><br>
 
 
-	Votre age:
-			<input type="number" name="age" required><br><br>
+	Votre mail:
+			<input type="text" name="mail" required><br><br>
 
-  Votre metier:
-	<select name="metier">
+  Votre numéro:
+	<input type="number" name="tel"><br><br>
+
+	Votre adresse:
+	<input type="text" name="adresse"><br><br>
+
+	Votre classe:
+  <input type="text" name="classe"><br><br>
+
+Votre profil:
+	<select name="profil_id">
       <?php
 			try{
-			$bdd= new PDO('mysql:host=localhost;dbname=formulaire;charset=utf8','root','');
+			$bdd= new PDO('mysql:host=localhost;dbname=projetweb;charset=utf8','root','');
 			}
 
 			catch(Exception $e){
 			  die('Erreur:'.$e->getMessage());
 			}
 
-			$reponse=$bdd->query('SELECT metier FROM metiers');
+			$reponse=$bdd->query('SELECT nom_profil FROM profil');
 			$donne=$reponse->fetchall();
 			foreach ($donne as $value) {
-				echo '<option>'.$value['metier'].'</option>';
+				echo '<option>'.$value['nom_profil'].'</option>';
 			}
 
 			?>
 		</select><br><br>
-
-	Votre pays:
-  <input type="radio" name="pays" value="France" checked>France
-  <input type="radio" name="pays" value="Allemagne">Allemagne
-  <input type="radio" name="pays" value="Espagne">Espagne
-	<input type="radio" name="pays" value="Portugal">Portugal
-	<input type="radio" name="pays" value="USA">USA
-  <input type="radio" name="pays" value="Angleterre">Angleterre<br><br>
 
 
 	<input type="button" value="Annuler" onclick="window.location.href='Connexion.php'"/>
