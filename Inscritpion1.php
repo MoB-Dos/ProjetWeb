@@ -40,6 +40,8 @@ Votre profil:
 			?>
 		</select><br><br>
 
+Votre mot de passe:
+<input type="password" name="mdp" required><br><br>
 
 	<input type="button" value="Annuler" onclick="window.location.href='Connexion.php'"/>
 	<input type="submit" value="Envoyer"/><br><br>
