@@ -15,22 +15,22 @@ $donne=$reponse->fetchall();
 
 foreach ($donne as $value) {
 
-if (isset($_POST['login']) && isset($_POST['mdp'])) {
+  if (isset($_POST['login']) && isset($_POST['mdp'])) {
 
-  if ($value['nom'] == $_POST['login'] && $value['prenom'] == $_POST['mdp']) {
+    if ($value['nom'] == $_POST['login'] && $value['mdp'] == $_POST['mdp']) {
 
-    $_SESSION['login'] = $_POST['login'];
+      $_SESSION['login'] = $_POST['login'];
 
-    header ('location: Accueil.php');
+      header ('location: Accueil.php');
+    }
+    else {
+      echo '<body onLoad="alert(\'Accès refusé\')">';
+
+      echo '<meta http-equiv="refresh" content="0;URL=Connexion.php">';
+    }
   }
   else {
-    echo '<body onLoad="alert(\'Accès refusé\')">';
-
-    echo '<meta http-equiv="refresh" content="0;URL=Connexion.php">';
+    echo 'Veuillez remplir les champs vides';
   }
-}
-else {
-  echo 'Veuillez remplir les champs vides';
-}
 }
 ?>
