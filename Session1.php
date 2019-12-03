@@ -21,7 +21,7 @@ foreach ($donne as $value) {
 
       $_SESSION['login'] = $_POST['login'];
 
-      header ('location: Accueil.php');
+      header ('location: Accueil2.php');
     }
     else {
       echo '<body onLoad="alert(\'Accès refusé\')">';
