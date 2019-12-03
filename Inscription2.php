@@ -20,5 +20,5 @@ catch(Exception $e){
 $req = $bdd->prepare('insert into utilisateur (nom, prenom, mail, tel, adresse, classe, profil_id, mdp) value(?,?,?,?,?,?,?,?)');
 $req -> execute(array($nom, $prenom, $mail, $tel, $adresse, $classe, $profil_id, $mdp));
 //header("location:Connexion.php");
-var_dump($req);
+var_dump($nom,$prenom,$mail,$tel,$adresse,$classe,$profil_id,$mdp);
 ?>
