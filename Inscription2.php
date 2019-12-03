@@ -9,6 +9,16 @@ $classe=$_POST['classe'];
 $profil_id=$_POST['profil_id'];
 $mdp=md5($_POST['mdp']);
 
+if ($profil_id=='etudiant') {
+  $profil_id='1';
+}
+elseif ($profil_id=='parent') {
+  $profil_id='2';
+}
+else {
+  $profil_id='3';
+}
+
 try{
 $bdd= new PDO('mysql:host=localhost;dbname=projetweb;charset=utf8','root','');
 }
