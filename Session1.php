@@ -20,6 +20,7 @@ foreach ($donne as $value) {
     if ($value['nom'] == $_POST['login'] && $value['mdp'] == md5($_POST['mdp'])) {
 
       $_SESSION['login'] = $_POST['login'];
+      $_SESSION['mdp'] = md5($_POST['mdp']);
 
       header ('location: Accueil2.php');
     }
