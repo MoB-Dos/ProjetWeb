@@ -11,7 +11,7 @@ session_start();
 	<input type="password" name="mdp" required/>
 
 	<input type="submit" value="Connexion"/>
-  <input type="button" value="Inscription" onclick="window.location.href='Inscription1.php'">
+  <input type="button" value="Annuler" onclick="window.location.href='Accueil.php'">
 
 
 </form>

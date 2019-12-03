@@ -43,7 +43,7 @@ Votre profil:
 Votre mot de passe:
 <input type="password" name="mdp" required><br><br>
 
-	<input type="button" value="Annuler" onclick="window.location.href='Connexion.php'"/>
+	<input type="button" value="Annuler" onclick="window.location.href='Accueil.php'"/>
 	<input type="submit" value="Envoyer"/><br><br>
 
 </form>
