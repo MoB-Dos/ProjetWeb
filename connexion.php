@@ -2,7 +2,7 @@
 session_start();
 ?>
 
-<form method="post" action="Session_1.php">
+<form method="post" action="Session1.php">
 
 	Votre nom:
 	<input type="text" name="login" required/>
