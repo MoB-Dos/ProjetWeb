@@ -15,9 +15,6 @@ if ($profil_id=='etudiant') {
 elseif ($profil_id=='parent') {
   $profil_id='2';
 }
-else {
-  $profil_id='3';
-}
 
 try{
 $bdd= new PDO('mysql:host=localhost;dbname=projetweb;charset=utf8','root','');

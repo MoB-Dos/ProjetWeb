@@ -22,23 +22,9 @@
 
 Votre profil:
 	<select name="profil_id">
-      <?php
-			try{
-			$bdd= new PDO('mysql:host=localhost;dbname=projetweb;charset=utf8','root','');
-			}
-
-			catch(Exception $e){
-			  die('Erreur:'.$e->getMessage());
-			}
-
-			$reponse=$bdd->query('SELECT nom_profil FROM profil');
-			$donne=$reponse->fetchall();
-			foreach ($donne as $value) {
-				echo '<option>'.$value['nom_profil'].'</option>';
-			}
-
-			?>
-		</select><br><br>
+			<option>etudiant</option>;
+			<option>parent</option>;		
+	</select><br><br>
 
 Votre mot de passe:
 <input type="password" name="mdp" required><br><br>
