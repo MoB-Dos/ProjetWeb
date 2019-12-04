@@ -7,6 +7,9 @@ session_start();
 	Votre nom:
 	<input type="text" name="login" required/>
 
+	Votre prénom:
+	<input type="text" name="prenom" required/>
+
   Votre mot de passe:
 	<input type="password" name="mdp" required/>
 
