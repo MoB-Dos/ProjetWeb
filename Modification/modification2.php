@@ -28,8 +28,8 @@ if ($mdp == $mdp2) {
     die('Erreur:'.$e->getMessage());
   }
 
-  $req = $bdd->prepare('UPDATE utilisateur SET (nom, prenom, mail, tel, adresse, classe, profil_id, mdp) VALUES (?,?,?,?,?,?,?,?) WHERE nom= ? && prenom = ?');
-  $req -> execute(array($nom, $prenom, $mail, $tel, $adresse, $classe, $profil_id, $mdp, $_SESSION['login'], $_SESSION['prenom']));
+  $req = $bdd->prepare('UPDATE utilisateur SET nom = ?, prenom = ?, mail = ?, tel = ?, adresse = ?, classe = ?, mdp = ?  WHERE nom= ? AND prenom = ?');
+  $a = $req -> execute(array($nom, $prenom, $mail, $tel, $adresse, $classe, $mdp, $_SESSION['login'], $_SESSION['prenom']));
   header("location:http://localhost/Projet/GIT/ProjetWeb/Accueil/Accueil2.php");
 }
 
@@ -38,6 +38,6 @@ else {
 
   echo '<meta http-equiv="refresh" content="0;URL=http://localhost/Projet/GIT/ProjetWeb/Inscription/Inscription1.php">';
 }
-var_dump($req)
+
 
 ?>
