@@ -28,9 +28,9 @@ if ($mdp == $mdp2) {
     die('Erreur:'.$e->getMessage());
   }
 
-  $req = $bdd->prepare('INSERT INTO utilisateur (nom, prenom, mail, tel, adresse, classe, profil_id, mdp) VALUES (?,?,?,?,?,?,?,?) WHERE nom= ? && prenom = ?');
-  $req -> execute(array($nom, $prenom, $mail, $tel, $adresse, $classe, $profil_id, $mdp, $nom, $prenom));
-  header("location:Accueil.php");
+  $req = $bdd->prepare('UPDATE utilisateur (nom, prenom, mail, tel, adresse, classe, profil_id, mdp) VALUES (?,?,?,?,?,?,?,?) WHERE nom= ? && prenom = ?');
+  $req -> execute(array($nom, $prenom, $mail, $tel, $adresse, $classe, $profil_id, $mdp, $_SESSION['login'], $_SESSION['prenom']));
+  header("location:Accueil2.php");
 }
 
 else {
