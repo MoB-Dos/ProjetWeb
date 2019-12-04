@@ -2,6 +2,11 @@
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 use PHPMailer\PHPMailer\SMTP;
+
+require '../vendor/phpmailer/phpmailer/src/Exception.php';
+require '../vendor/phpmailer/phpmailer/src/PHPMailer.php';
+require '../vendor/phpmailer/phpmailer/src/SMTP.php';
+require '../vendor/autoload.php';
 session_start ();
 
 $nom=$_POST['nom'];
@@ -44,10 +49,7 @@ else {
     $req = $bdd->prepare('INSERT INTO utilisateur (nom, prenom, mail, tel, adresse, classe, profil_id, mdp) VALUES (?,?,?,?,?,?,?,?)');
     $req -> execute(array($nom, $prenom, $email, $tel, $adresse, $classe, $profil_id, $mdp));
 
-    require 'vendor/phpmailer/phpmailer/src/Exception.php';
-    require 'vendor/phpmailer/phpmailer/src/PHPMailer.php';
-    require 'vendor/phpmailer/phpmailer/src/SMTP.php';
-    require 'vendor/autoload.php';
+
 
     $mail = new PHPMailer(true);
 
