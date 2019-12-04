@@ -8,12 +8,19 @@ catch(Exception $e){
   die('Erreur:'.$e->getMessage());
 }
 
-$req = $bdd->prepare('select * from utilisateur where nom = :nom && mdp = :mdp');
+$req = $bdd->prepare('select * from utilisateur where nom = :nom and prenom = :prenom');
 $req->execute(array('nom' => $_SESSION['login'],
-'mdp' => $_SESSION['mdp']));
+'prenom' => $_SESSION['prenom']));
 $donne=$req->fetchall();
-var_dump($donne);
 foreach ($donne as $value) {
-echo $donne['nom']." ".$donne['prenom']." ".$donne['mail']." ".$donne['tel']." ".$donne['adresse']." ".$donne['classe']." ".$donne['profil_id'];
+  if($value['profil_id'] == '1'){
+    echo $value['nom']." ".$value['prenom']." ".$value['mail']." ".$value['tel']." ".$value['adresse']." ".$value['classe']." "."étudiant";
+  }
+  if($value['profil_id'] == '2'){
+    echo $value['nom']." ".$value['prenom']." ".$value['mail']." ".$value['tel']." ".$value['adresse']." ".$value['classe']." "."parent";
+  }
+  if($value['profil_id'] == '3'){
+    echo $value['nom']." ".$value['prenom']." ".$value['mail']." ".$value['tel']." ".$value['adresse']." ".$value['classe']." "."admin";
+  }
 }
 ?>
