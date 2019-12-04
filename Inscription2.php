@@ -19,24 +19,36 @@ elseif ($profil_id=='parent') {
   $profil_id='2';
 }
 
-if ($mdp == $mdp2) {
-  try{
-  $bdd= new PDO('mysql:host=localhost;dbname=projetweb;charset=utf8','root','');
-  }
+try{
+$bdd= new PDO('mysql:host=localhost;dbname=projetweb;charset=utf8','root','');
+}
 
-  catch(Exception $e){
-    die('Erreur:'.$e->getMessage());
-  }
+catch(Exception $e){
+  die('Erreur:'.$e->getMessage());
+}
 
-  $req = $bdd->prepare('INSERT INTO utilisateur (nom, prenom, mail, tel, adresse, classe, profil_id, mdp) VALUES (?,?,?,?,?,?,?,?)');
-  $req -> execute(array($nom, $prenom, $mail, $tel, $adresse, $classe, $profil_id, $mdp));
-  header("location:Connexion.php");
+$reponse=$bdd->prepare('SELECT * FROM utilisateur WHERE nom=? AND prenom=? OR mail=?');
+$reponse->execute(array($nom, $prenom,$mail));
+$donne=$reponse->fetchall();
+
+if ($donne) {
+  echo '<body onLoad="alert(\'Utilisateur déjà existant\')">';
+
+  echo '<meta http-equiv="refresh" content="0;URL=Inscription1.php">';
 }
 
 else {
-  echo '<body onLoad="alert(\'Veuillez entrer deux mots de passe identiques\')">';
+  if ($mdp == $mdp2) {
+    $req = $bdd->prepare('INSERT INTO utilisateur (nom, prenom, mail, tel, adresse, classe, profil_id, mdp) VALUES (?,?,?,?,?,?,?,?)');
+    $req -> execute(array($nom, $prenom, $mail, $tel, $adresse, $classe, $profil_id, $mdp));
+    header("location:Connexion.php");
+  }
 
-  echo '<meta http-equiv="refresh" content="0;URL=Inscription1.php">';
+  else {
+    echo '<body onLoad="alert(\'Veuillez entrer deux mots de passe identiques\')">';
+
+    echo '<meta http-equiv="refresh" content="0;URL=Inscription1.php">';
+  }
 }
 
 ?>
