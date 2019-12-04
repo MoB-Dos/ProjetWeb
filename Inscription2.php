@@ -1,5 +1,7 @@
 <?php
 
+session_start ();
+
 $nom=$_POST['nom'];
 $prenom=$_POST['prenom'];
 $mail=$_POST['mail'];
@@ -32,8 +34,9 @@ if ($mdp == $mdp2) {
 }
 
 else {
-  echo "Veuillez entrer des mots de passe identiques";
-  header("location:Inscription1.php");
+  echo '<body onLoad="alert(\'Veuillez entrer deux mots de passe identiques\')">';
+
+  echo '<meta http-equiv="refresh" content="0;URL=Inscription1.php">';
 }
 
 ?>

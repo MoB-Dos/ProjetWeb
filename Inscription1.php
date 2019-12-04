@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <form method="post" action="Inscription2.php">
 
 	Votre nom:
