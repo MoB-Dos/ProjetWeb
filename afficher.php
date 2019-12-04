@@ -24,3 +24,4 @@ foreach ($donne as $value) {
   }
 }
 ?>
+<br><br><input type="button" value="Retour" onclick="window.location.href='Accueil2.php'"/>
