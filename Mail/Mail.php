@@ -1,6 +1,6 @@
 <form action='MailPHP.php' method='GET'>
 
-  votre message : <input type='text' name='message'/>
+  votre mail : <input type='text' name='mail'/>
 
   <input type='submit' value='send' />
 
