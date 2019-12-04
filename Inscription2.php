@@ -1,5 +1,7 @@
 <?php
-
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+use PHPMailer\PHPMailer\SMTP;
 session_start ();
 
 $nom=$_POST['nom'];
@@ -41,12 +43,6 @@ else {
   if ($mdp == $mdp2) {
     $req = $bdd->prepare('INSERT INTO utilisateur (nom, prenom, mail, tel, adresse, classe, profil_id, mdp) VALUES (?,?,?,?,?,?,?,?)');
     $req -> execute(array($nom, $prenom, $email, $tel, $adresse, $classe, $profil_id, $mdp));
-    $email = $_GET['mail'];
-
-
-    use PHPMailer\PHPMailer\PHPMailer;
-    use PHPMailer\PHPMailer\Exception;
-    use PHPMailer\PHPMailer\SMTP;
 
     require 'vendor/phpmailer/phpmailer/src/Exception.php';
     require 'vendor/phpmailer/phpmailer/src/PHPMailer.php';
@@ -71,8 +67,8 @@ else {
 
         $mail->isHTML(true);
         $mail->Subject = 'test';
-        $mail->Body    = 'regarder ça marche!';
-        $mail->AltBody = 'regarder ça marche!';
+        $mail->Body    = 'Inscription reussie!';
+        $mail->AltBody = 'Inscription reussie!';
 
         $mail->send();
         echo 'Message has been sent';
