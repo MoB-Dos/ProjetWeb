@@ -30,7 +30,7 @@ if ($mdp == $mdp2) {
 
   $req = $bdd->prepare('INSERT INTO utilisateur (nom, prenom, mail, tel, adresse, classe, profil_id, mdp) VALUES (?,?,?,?,?,?,?,?) WHERE nom= ? && prenom = ?');
   $req -> execute(array($nom, $prenom, $mail, $tel, $adresse, $classe, $profil_id, $mdp, $nom, $prenom));
-  header("location:Connexion.php");
+  header("location:Accueil.php");
 }
 
 else {
