@@ -36,7 +36,7 @@ Votre mot de passe:
 Retapez votre mot de passe:
 <input type="password" name="mdp2" required><br><br>
 
-	<input type="button" value="Annuler" onclick="window.location.href='http://localhost/Errazorr/GIT/ProjetWeb/Accueil.php'"/>
+	<input type="button" value="Annuler" onclick="window.location.href='http://localhost/Projet/GIT/ProjetWeb/Accueil.php'"/>
 	<input type="submit" value="Envoyer"/><br><br>
 
 </form>

@@ -75,7 +75,7 @@ else {
           } catch (Exception $e) {
         echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
           }
-    header("location:http://localhost/Errazorr/GIT/ProjetWeb/Connexion/Connexion.php");
+    header("location:http://localhost/Projet/GIT/ProjetWeb/Connexion/Connexion.php");
   }
 
   else {

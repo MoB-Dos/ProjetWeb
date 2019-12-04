@@ -22,7 +22,7 @@ foreach ($donne as $value) {
       $_SESSION['login'] = $_POST['login'];
       $_SESSION['prenom'] = $_POST['prenom'];
 
-      header ('location: http://localhost/Errazorr/GIT/ProjetWeb/Accueil/Accueil2.php');
+      header ('location: http://localhost/Projet/GIT/ProjetWeb/Accueil/Accueil2.php');
     }
     else {
       echo '<body onLoad="alert(\'Accès refusé\')">';
