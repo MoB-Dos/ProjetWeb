@@ -1,9 +1,9 @@
 <?php
 
-$test = $_GET['test'];
+$test = $_GET['message'];
 
 // envoi d'un email à webmaster@tutovisuel.com
-mail("e.birba@lprs.Fr", "ceci est un test", "$test");
-
+PhpMailer("projetweb932@gmail.com", "ceci est un test", "lol");
+echo'ok';
 
  ?>
