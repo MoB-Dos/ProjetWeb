@@ -16,7 +16,7 @@ session_start();
 			<input type="text" name="mail" required><br><br>
 
   Votre numéro:
-	<input type="number" name="tel"><br><br>
+	<input type="tel" name="tel" maxlength="10" minlength="10"><br><br>
 
 	Votre adresse:
 	<input type="text" name="adresse"><br><br>
