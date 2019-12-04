@@ -30,13 +30,13 @@ if ($mdp == $mdp2) {
 
   $req = $bdd->prepare('UPDATE utilisateur SET (nom, prenom, mail, tel, adresse, classe, profil_id, mdp) VALUES (?,?,?,?,?,?,?,?) WHERE nom= ? && prenom = ?');
   $req -> execute(array($nom, $prenom, $mail, $tel, $adresse, $classe, $profil_id, $mdp, $_SESSION['login'], $_SESSION['prenom']));
-  header("location:Accueil2.php");
+  header("location:http://localhost/Errazorr/GIT/ProjetWeb/Accueil/Accueil2.php");
 }
 
 else {
   echo '<body onLoad="alert(\'Veuillez entrer deux mots de passe identiques\')">';
 
-  echo '<meta http-equiv="refresh" content="0;URL=http://localhost/Errazorr/GIT/ProjetWeb/Inscription1.php">';
+  echo '<meta http-equiv="refresh" content="0;URL=http://localhost/Errazorr/GIT/ProjetWeb/Inscription/Inscription1.php">';
 }
 var_dump($req)
 
