@@ -1,5 +1,15 @@
 <?php
 session_start();
+try{
+$bdd= new PDO('mysql:host=localhost;dbname=projetweb;charset=utf8','root','');
+}
+
+catch(Exception $e){
+  die('Erreur:'.$e->getMessage());
+}
+
+$req=$bdd->prepare('SELECT * FROM utilisateur WHERE nom= ? AND prenom=?');
+$req->execute(array( $_SESSION['login'],  $_SESSION['prenom']));
 ?>
 
 <form method="post" action="modification2.php">
