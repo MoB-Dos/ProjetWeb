@@ -30,9 +30,9 @@ try {
     $mail->addAddress($email, 'user');
 
     $mail->isHTML(true);
-    $mail->Subject = 'test';
-    $mail->Body    = 'regarder ça marche!';
-    $mail->AltBody = 'regarder ça marche!';
+    $mail->Subject = 'Inscription';
+    $mail->Body    = 'Inscription réussie';
+    $mail->AltBody = 'Inscription réussie';
 
     $mail->send();
     echo 'Message has been sent';
