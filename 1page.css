@@ -3,3 +3,24 @@
 background-color: black;
 
 }
+
+.btn4{
+  top :350px;
+  left:220px;
+  position:absolute;
+  margin: auto;
+}
+
+.Widget1{
+  margin-right: 30px;
+  float: left;
+}
+
+.Widget2{
+  margin-right: 30px;
+  float: left;
+}
+
+.Widget3{
+  float: left;
+}

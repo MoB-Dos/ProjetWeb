@@ -8,10 +8,10 @@ use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 use PHPMailer\PHPMailer\SMTP;
 
-require '../vendor/phpmailer/phpmailer/src/Exception.php';
-require '../vendor/phpmailer/phpmailer/src/PHPMailer.php';
-require '../vendor/phpmailer/phpmailer/src/SMTP.php';
-require '../vendor/autoload.php';
+require 'vendor/phpmailer/phpmailer/src/Exception.php';
+require 'vendor/phpmailer/phpmailer/src/PHPMailer.php';
+require 'vendor/phpmailer/phpmailer/src/SMTP.php';
+require 'vendor/autoload.php';
 
 $mail = new PHPMailer(true);
 
@@ -30,9 +30,9 @@ try {
     $mail->addAddress($email, 'user');
 
     $mail->isHTML(true);
-    $mail->Subject = 'Inscription';
-    $mail->Body    = 'Inscription réussie';
-    $mail->AltBody = 'Inscription réussie';
+    $mail->Subject = 'test';
+    $mail->Body    = 'regarder ça marche!';
+    $mail->AltBody = 'regarder ça marche!';
 
     $mail->send();
     echo 'Message has been sent';

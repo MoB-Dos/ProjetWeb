@@ -1,5 +1,14 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto");
 
+.rectangle{
+  width:2500px;
+	height:250px;
+	background: linear-gradient(to right, #32383E, #595e63);
+  margin-top: -220px
+}
+.test{
+  padding-left: 1387px
+}
 #nav-colors, #font-colors, #edges {
   margin-top: 10px;
 }
@@ -56,7 +65,7 @@
   font-family: 'Roboto', sans-serif;
 }
 .navbar {
-  background: linear-gradient(to right, #d31027, #ea384d);
+  background: linear-gradient(to right, #136bb9, #139eb9);
   border: 0;
   border-radius: 30;
 }
