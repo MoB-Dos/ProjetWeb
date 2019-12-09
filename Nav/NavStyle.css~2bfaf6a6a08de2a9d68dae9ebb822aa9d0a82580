@@ -1,21 +1,14 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto");
 
-<<<<<<< HEAD:Nav/NavStyle.css
-.backgroundNav{
-  width:1400px;
-	height:100px;
-	background:#069;
-}
-=======
 .rectangle{
-	width:2500px;
+  width:2500px;
 	height:250px;
-	background:32383;
+	background: linear-gradient(to right, #32383E, #595e63);
   margin-top: -220px
 }
-
-
->>>>>>> 2bfaf6a6a08de2a9d68dae9ebb822aa9d0a82580:Nav/dist/style.css
+.test{
+  padding-left: 1387px
+}
 #nav-colors, #font-colors, #edges {
   margin-top: 10px;
 }
@@ -30,6 +23,25 @@
   border: 2px solid white;
 }
 
+#nav-colors #red {
+  background: linear-gradient(to right, #d31027, #ea384d);
+}
+#nav-colors #purple {
+  background: linear-gradient(to right, #41295a, #2f0743);
+}
+#nav-colors #blue {
+  background: linear-gradient(to right, #396afc, #2948ff);
+}
+#nav-colors #green {
+  background: linear-gradient(to right, #add100, #7b920a);
+}
+#nav-colors #yellow {
+  background: linear-gradient(to right, #f7971e, #ffd200);
+}
+#nav-colors #orange {
+  background: linear-gradient(to right, #e43a15, #e65245);
+}
+
 #font-colors #white {
   background: white;
 }
@@ -40,7 +52,6 @@
 #edges #rounded {
   background: black;
 }
-
 #edges #square {
   background: black;
   border-radius: 0px;
@@ -54,11 +65,7 @@
   font-family: 'Roboto', sans-serif;
 }
 .navbar {
-<<<<<<< HEAD:Nav/NavStyle.css
-  background: linear-gradient(to right, #4350DC, #43A3DC);
-=======
   background: linear-gradient(to right, #136bb9, #139eb9);
->>>>>>> 2bfaf6a6a08de2a9d68dae9ebb822aa9d0a82580:Nav/dist/style.css
   border: 0;
   border-radius: 30;
 }
@@ -150,7 +157,7 @@
 .navbar .dropdown .dropdown-menu {
   min-width: 0px !important;
   width: 100%;
-  background: #43A3DC;
+  background: #ff5858;
   text-align: center;
   border-radius: 0;
 }
