@@ -50,11 +50,7 @@ else {
   if ($mdp == $mdp2) {
     $req = $bdd->prepare('INSERT INTO utilisateur (nom, prenom, mail, tel, adresse, classe, profil_id, mdp) VALUES (?,?,?,?,?,?,?,?)');
     $req -> execute(array($nom, $prenom, $email, $tel, $adresse, $classe, $profil_id, $mdp));
-    $_SESSION['mail'] = $_POST['mail'];
-    $_SESSION['tel'] = $_POST['tel'];
-    $_SESSION['adresse'] = $_POST['adresse'];
-    $_SESSION['classe'] = $_POST['classe'];
-    $_SESSION['mdp'] = $_POST['mdp'];
+    
 
 
 

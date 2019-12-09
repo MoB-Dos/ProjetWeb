@@ -2,7 +2,7 @@
 session_start();
 ?>
 
-<form method="post" action="Inscription2.php">
+<form method="post" action="Traitement.php">
 
 	Votre nom:
 	<input type="text" name="nom" required/>

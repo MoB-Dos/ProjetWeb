@@ -14,7 +14,7 @@ $donnee = $req->fetch();
 
 ?>
 
-<form method="post" action="modification2.php">
+<form method="post" action="TraitementModif.php">
 
 	Votre nom:
 	<input type="text" name="nom" value=<?php echo $_SESSION['login'];?> required/>
@@ -59,7 +59,7 @@ Votre profil:
 			<option>parent</option>;
 	</select><br><br>
 
-	<input type="button" value="Annuler" onclick="window.location.href='http://localhost/Projet/GIT/ProjetWeb/Accueil.php'"/>
+	<input type="button" value="Annuler" onclick="window.location.href='http://localhost/Projet/GIT/ProjetWeb/Index.php'"/>
 	<input type="submit" value="Envoyer"/>
 
 </form>
