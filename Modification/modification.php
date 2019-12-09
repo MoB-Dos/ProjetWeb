@@ -11,6 +11,7 @@ catch(Exception $e){
 $req=$bdd->prepare('SELECT * FROM utilisateur WHERE nom= ? AND prenom=?');
 $req->execute(array( $_SESSION['login'],  $_SESSION['prenom']));
 $donnee = $req->fetch();
+
 ?>
 
 <form method="post" action="modification2.php">
@@ -30,7 +31,7 @@ $donnee = $req->fetch();
 	<input type="tel" name="tel" maxlength="10" minlength="10" value=<?php echo $donnee['tel'];?>><br><br>
 
 	Votre adresse:
-	<input type="text" name="adresse" value=<?php echo $donnee['adresse'];?>><br><br>
+	<input type="text" name="adresse" value='<?php echo $donnee['adresse'];?>'><br><br>
 
 	Votre classe:
   <input type="text" name="classe" value=<?php echo $donnee['classe'];?>><br><br>
