@@ -1,4 +1,7 @@
 <?php
+
+session_start();
+
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 use PHPMailer\PHPMailer\SMTP;
@@ -7,7 +10,6 @@ require '../vendor/phpmailer/phpmailer/src/Exception.php';
 require '../vendor/phpmailer/phpmailer/src/PHPMailer.php';
 require '../vendor/phpmailer/phpmailer/src/SMTP.php';
 require '../vendor/autoload.php';
-session_start ();
 
 $nom=$_POST['nom'];
 $prenom=$_POST['prenom'];
@@ -48,6 +50,11 @@ else {
   if ($mdp == $mdp2) {
     $req = $bdd->prepare('INSERT INTO utilisateur (nom, prenom, mail, tel, adresse, classe, profil_id, mdp) VALUES (?,?,?,?,?,?,?,?)');
     $req -> execute(array($nom, $prenom, $email, $tel, $adresse, $classe, $profil_id, $mdp));
+    $_SESSION['mail'] = $_POST['mail'];
+    $_SESSION['tel'] = $_POST['tel'];
+    $_SESSION['adresse'] = $_POST['adresse'];
+    $_SESSION['classe'] = $_POST['classe'];
+    $_SESSION['mdp'] = $_POST['mdp'];
 
 
 
@@ -68,7 +75,7 @@ else {
         $mail->addAddress($email, 'user');
 
         $mail->isHTML(true);
-        $mail->Subject = 'test';
+        $mail->Subject = 'Inscription';
         $mail->Body    = 'Inscription reussie!';
         $mail->AltBody = 'Inscription reussie!';
 

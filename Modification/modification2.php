@@ -28,9 +28,9 @@ if ($mdp == $mdp2) {
     die('Erreur:'.$e->getMessage());
   }
 
-  $req = $bdd->prepare('UPDATE utilisateur SET nom = ?, prenom = ?, mail = ?, tel = ?, adresse = ?, classe = ?, mdp = ?  WHERE nom= ? AND prenom = ?');
-  $a = $req -> execute(array($nom, $prenom, $mail, $tel, $adresse, $classe, $mdp, $_SESSION['login'], $_SESSION['prenom']));
-  header("location:http://localhost/Projet/GIT/ProjetWeb/Accueil/Accueil2.php");
+  $req = $bdd->prepare('UPDATE utilisateur SET nom = ?, prenom = ?, mail = ?, tel = ?, adresse = ?, classe = ?  WHERE nom= ? AND prenom = ?');
+  $a = $req -> execute(array($nom, $prenom, $mail, $tel, $adresse, $classe, $_SESSION['login'], $_SESSION['prenom']));
+  header("location:http://localhost/Projet/GIT/ProjetWeb/Connexion/connexion.php");
 }
 
 else {
