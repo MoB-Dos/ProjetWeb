@@ -31,13 +31,10 @@ try {
 
     $mail->isHTML(true);
     $mail->Subject = 'test';
-<<<<<<< HEAD
     $mail->Body    = 'ce mail a été envoyer grace a un programme';
     $mail->AltBody = 'ce mail a été envoyer grace a un programme';
-=======
     $mail->Body    = 'regarder ça marche!';
     $mail->AltBody = 'regarder ça marche!';
->>>>>>> 2bfaf6a6a08de2a9d68dae9ebb822aa9d0a82580
 
     $mail->send();
     echo 'Message has been sent';

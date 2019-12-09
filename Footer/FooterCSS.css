@@ -21,7 +21,6 @@ font-family: 'Open Sans', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, s
 .Accés{
 float: left;
 color : #139eb9;
-margin-left: 50px;
 margin-Right: 50px;
 line-height: 1.1em;
 margin-bottom: 8px;
@@ -38,7 +37,7 @@ font-family: 'Open Sans', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, s
 }
 
 .footer{
-  left:220px;
+  left:100px;
   bottom: 0px;
   position:absolute;
   margin: auto;
@@ -46,7 +45,8 @@ font-family: 'Open Sans', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, s
 
 .rectangle2{
 	height:250px;
+  width: 500px;
 	background: linear-gradient(to right, #32383E, #595e63);
   right: 200px;
-  bottom: 1;
+  bottom: 0;
 }

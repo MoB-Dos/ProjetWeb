@@ -1,14 +1,13 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto");
 
 .rectangle{
-  width:2500px;
+	width:2500px;
 	height:250px;
-	background: linear-gradient(to right, #32383E, #595e63);
+	background:32383;
   margin-top: -220px
 }
-.test{
-  padding-left: 1387px
-}
+
+
 #nav-colors, #font-colors, #edges {
   margin-top: 10px;
 }

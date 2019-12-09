@@ -3,17 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <title>Minimal Bootstrap Navbar</title>
-
   <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
-  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css'><link rel="stylesheet" href="./NavStyle.css">
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css'><link rel="stylesheet" href="./style.css">
 
 </head>
 <body>
-
-<header>
-
-<center>
-
 
 <nav class="navbar" id="navbarcenter">
 	<div class="container-fluid">
@@ -34,7 +28,7 @@
         <!-- Formations -->
 				<li class="dropdown">
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-						<span class="fas fa-school"></span><span class="link">Formations</span> <span class="fa fa-caret-down"></span></a>
+						<span class="fa fa-tags"></span><span class="link">Formations</span> <span class="fa fa-caret-down"></span></a>
 					<ul class="dropdown-menu">
 						<li><a href="#"><span class="fa fa-tag"></span> Catalogue 1</a></li>
 						<li><a href="#"><span class="fa fa-tag"></span> Catalogue 2</a></li>
@@ -44,43 +38,49 @@
         <!-- Relations entreprises -->
 				<li class="dropdown">
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-						<span class="fas fa-building"></span><span class="link">Relations entreprises</span> <span class="fa fa-caret-down"></span></a>
+						<span class="fa fa-gears"></span><span class="link">Relations entreprises</span> <span class="fa fa-caret-down"></span></a>
 					<ul class="dropdown-menu">
-						<li><a href="#"><span class="fa fa-gear"/></span> Calendrier alternance</a></li>
-						<li><a href="#"><span class="fa fa-gear"/></span> Déposer des offres</a></li>
+						<li><a href="#"><span class="fa fa-gear"/></span> Service 1</a></li>
+						<li><a href="#"><span class="fa fa-gear"/></span> Service 2</a></li>
+						<li><a href="#"><span class="fa fa-gear"/></span> Service 3</a></li>
 					</ul>
 				</li>
 
         <!--vie de l'établisement-->
 				<li class="dropdown">
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-						<span class="fas fa-map-marker-alt"></span><span class="link">Vie de l'établisement</span> <span class="fa fa-caret-down"></span></a>
+						<span class="fa fa-gears"></span><span class="link">Vie de l'établisement</span> <span class="fa fa-caret-down"></span></a>
 					<ul class="dropdown-menu">
-						<li><a href="#"><span class="fa fa-gear"/></span> Voyages et sorties</a></li>
-						<li><a href="#"><span class="fa fa-gear"/></span> Projet réalisés</a></li>
+						<li><a href="#"><span class="fa fa-gear"/></span> Service 1</a></li>
+						<li><a href="#"><span class="fa fa-gear"/></span> Service 2</a></li>
+						<li><a href="#"><span class="fa fa-gear"/></span> Service 3</a></li>
 					</ul>
 				</li>
 
         <!-- Connexion-->
-        <li class="test"><a href="../Connexion/connexion.php"><span class="fas fa-sign-in-alt"></span><span class="link"> Connexion</span></a></li>
+        <li><a href="#"><span class="fas fa-sign-in-alt"></span><span class="link"> Connexion</span></a></li>
         <!--Inscription -->
-        <li><a href="../Inscription/Inscription1.php"><span class="fas fa-user-plus"></span><span class="link"> Inscription</span></a></li>
+        <li><a href="#"><span class="fas fa-user-plus"></span><span class="link"> Inscription</span></a></li>
+
 
       </ul>
 			<!-- Nav Right -->
-
+			<form class="navbar-form navbar-right">
+				<div class="form-group">
+					<input type="text" class="form-control" placeholder="Search">
+				</div>
+				<button type="submit" class="btn"><span class="fa fa-search"></span></button>
+			</form>
 		</div>
 	</div>
 </nav>
 
-<div class="rectangle"></div>
+<div class="rectangle">
+</div>
 
 <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'></script><script  src="./NavScript.js"></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'></script><script  src="./script.js"></script>
 
 </body>
 
-</header>
-
-</center>
 </html>
