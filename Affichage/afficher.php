@@ -17,13 +17,13 @@ $donne=$req->fetchall();
 //Affichage de chacune des données selon le profil_id
 foreach ($donne as $value) {
   if($value['profil_id'] == '1'){
-    echo $value['nom']." ".$value['prenom'].'<br>'."Mail :"." ".$value['mail'].'<br>'."Téléphone :"." ".$value['tel'].'<br>'."Adresse :"." ".$value['adresse'].'<br>'."Classe :"." ".$value['classe'].'<br>'."Etudiant";
+    echo $value['nom']." ".$value['prenom'].'<br><br>'."Mail :"." ".$value['mail'].'<br><br>'."Téléphone :"." ".$value['tel'].'<br><br>'."Adresse :"." ".$value['adresse'].'<br><br>'."Classe :"." ".$value['classe'].'<br><br>'."Etudiant";
   }
   if($value['profil_id'] == '2'){
-    echo $value['nom']." ".$value['prenom'].'<br>'."Mail :"." ".$value['mail'].'<br>'."Téléphone :"." ".$value['tel'].'<br>'."Adresse :"." ".$value['adresse'].'<br>'."Classe :"." ".$value['classe'].'<br>'."Parent";
+    echo $value['nom']." ".$value['prenom'].'<br><br>'."Mail :"." ".$value['mail'].'<br><br>'."Téléphone :"." ".$value['tel'].'<br><br>'."Adresse :"." ".$value['adresse'].'<br><br>'."Classe :"." ".$value['classe'].'<br><br>'."Parent";
   }
   if($value['profil_id'] == '3'){
-    echo $value['nom']." ".$value['prenom'].'<br>'."Mail :"." ".$value['mail'].'<br>'."Téléphone :"." ".$value['tel'].'<br>'."Adresse :"." ".$value['adresse'].'<br>'."Classe :"." ".$value['classe'].'<br>'."Admin";
+    echo $value['nom']." ".$value['prenom'].'<br><br>'."Mail :"." ".$value['mail'].'<br><br>'."Téléphone :"." ".$value['tel'].'<br><br>'."Adresse :"." ".$value['adresse'].'<br><br>'."Classe :"." ".$value['classe'].'<br><br>'."Admin";
   }
 }
 ?>
