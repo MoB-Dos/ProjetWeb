@@ -33,6 +33,7 @@ $donnee = $req->fetch();
 	Votre adresse:
 	<input type="text" name="adresse" value='<?php echo $donnee['adresse'];?>'><br><br>
 
+  Votre classe:
   <select name="classe">
 	<?php
 	try{
