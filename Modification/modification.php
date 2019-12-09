@@ -59,7 +59,7 @@ Votre profil:
 			<option>parent</option>;
 	</select><br><br>
 
-	<input type="button" value="Annuler" onclick="window.location.href='http://localhost/Projet/GIT/ProjetWeb/Index.php'"/>
+	<input type="button" value="Annuler" onclick="window.location.href='http://localhost/Projet/GIT/ProjetWeb/Accueil/Accueil.php'"/>
 	<input type="submit" value="Envoyer"/>
 
 </form>
