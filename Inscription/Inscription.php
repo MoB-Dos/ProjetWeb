@@ -1,7 +1,8 @@
 <?php
+//Démarrage de la session
 session_start();
 ?>
-
+<!-- Formulaire d'incription -->
 <form method="post" action="Traitement.php">
 
 	Votre nom:
@@ -52,6 +53,7 @@ Votre mot de passe:
 Retapez votre mot de passe:
 <input type="password" name="mdp2" required><br><br>
 
+<!--Boutons de validation et de retour-->
 	<input type="button" value="Annuler" onclick="window.location.href='http://localhost/Projet/GIT/ProjetWeb/Accueil/Accueil.php'"/>
 	<input type="submit" value="Envoyer"/><br><br>
 

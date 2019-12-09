@@ -1,5 +1,8 @@
 <?php
+//Démarrage de la session
 session_start();
+
+//Connexion à la base de données projetweb
 try{
 $bdd= new PDO('mysql:host=localhost;dbname=projetweb;charset=utf8','root','');
 }
@@ -8,12 +11,14 @@ catch(Exception $e){
   die('Erreur:'.$e->getMessage());
 }
 
+//Sélection dans la table utilisateur
 $req=$bdd->prepare('SELECT * FROM utilisateur WHERE nom= ? AND prenom=?');
 $req->execute(array( $_SESSION['login'],  $_SESSION['prenom']));
 $donnee = $req->fetch();
 
 ?>
 
+<!-- Formulaire de modification -->
 <form method="post" action="TraitementModif.php">
 
 	Votre nom:
@@ -59,6 +64,7 @@ Votre profil:
 			<option>parent</option>;
 	</select><br><br>
 
+<!-- Boutons de validation et de retour-->
 	<input type="button" value="Annuler" onclick="window.location.href='http://localhost/Projet/GIT/ProjetWeb/Accueil/Accueil.php'"/>
 	<input type="submit" value="Envoyer"/>
 
