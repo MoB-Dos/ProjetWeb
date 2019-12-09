@@ -33,8 +33,24 @@ $donnee = $req->fetch();
 	Votre adresse:
 	<input type="text" name="adresse" value='<?php echo $donnee['adresse'];?>'><br><br>
 
-	Votre classe:
-  <input type="text" name="classe" value=<?php echo $donnee['classe'];?>><br><br>
+  <select name="classe">
+	<?php
+	try{
+	$bdd= new PDO('mysql:host=localhost;dbname=projetweb;charset=utf8','root','');
+	}
+
+	catch(Exception $e){
+		die('Erreur:'.$e->getMessage());
+	}
+
+	$reponse=$bdd->query('SELECT classe FROM classe');
+	$donne=$reponse->fetchall();
+	foreach ($donne as $value) {
+		echo '<option>'.$value['classe'].'</option>';
+	}
+
+	?>
+</select><br><br>
 
 Votre profil:
 	<select name="profil_id">
