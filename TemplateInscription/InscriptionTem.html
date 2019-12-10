@@ -33,14 +33,14 @@
 		<div class="container-login100">
 			<div class="wrap-login100 p-t-50 p-b-90">
 
-				<form class="login100-form validate-form flex-sb flex-w" method="post" action="../Connexion/Session1.php">
+				<form class="login100-form validate-form flex-sb flex-w" method="post" action="../Inscription/Traitement.php">
 					<span class="login100-form-title p-b-51">
-						Connexion
+						Inscription
 					</span>
 
 					<!--Nom===============================================================================================-->
 					<div class="wrap-input100 validate-input m-b-16" data-validate = "Le Nom est necessaire">
-						<input class="input100" type="text" name="login" placeholder="Nom">
+						<input class="input100" type="text" name="nom" placeholder="Nom">
 						<span class="focus-input100"></span>
 					</div>
 					<!--===============================================================================================-->
@@ -53,43 +53,47 @@
 					<!--===============================================================================================-->
 
 					<!--Mail===============================================================================================-->
-					<div class="wrap-input100 validate-input m-b-16" data-validate = "Le Prenom est necessaire">
-						<input class="input100" type="text" name="prenom" placeholder="Prenom">
+					<div class="wrap-input100 validate-input m-b-16" data-validate = "Le Mail est necessaire">
+						<input class="input100" type="text" name="mail" placeholder="Mail">
 						<span class="focus-input100"></span>
 					</div>
 					<!--===============================================================================================-->
 
 					<!--Numéro===============================================================================================-->
-					<div class="wrap-input100 validate-input m-b-16" data-validate = "Le Prenom est necessaire">
-						<input class="input100" type="text" name="prenom" placeholder="Prenom">
+					<div class="wrap-input100 validate-input m-b-16" data-validate = "Le Numero est necessaire">
+						<input class="input100" type="tel" name="tel" maxlength="10" minlength="10" placeholder="Numero">
 						<span class="focus-input100"></span>
 					</div>
 					<!--===============================================================================================-->
 
 					<!--Adresse===============================================================================================-->
-					<div class="wrap-input100 validate-input m-b-16" data-validate = "Le Prenom est necessaire">
-						<input class="input100" type="text" name="prenom" placeholder="Prenom">
+					<div class="wrap-input100 validate-input m-b-16" data-validate = "L'Adresse est necessaire">
+						<input class="input100" type="text" name="adresse" placeholder="Adresse">
 						<span class="focus-input100"></span>
 					</div>
 					<!--===============================================================================================-->
 
-					<!--Prenom===============================================================================================-->
-					<div class="wrap-input100 validate-input m-b-16" data-validate = "Le Prenom est necessaire">
-						<input class="input100" type="text" name="prenom" placeholder="Prenom">
+					<!--profil===============================================================================================-->
+					<div class="input100" data-validate = "L'Adresse est necessaire" style="background-color: #e6e6e6;margin-bottom: 25px;">
+						<select name="profil_id" class="input100" style="border : none;" placeholder="Adresse">
+								<option value="0" selected disabled> <p class="placeholder">Profil</p></option>
+								<option>Etudiant</option>;
+								<option>Parent</option>;
+						</select><br><br>
 						<span class="focus-input100"></span>
 					</div>
 					<!--===============================================================================================-->
 
-					<!--MDP===============================================================================================-->
+					<!--MDP================================================================================================-->
 					<div class="wrap-input100 validate-input m-b-16" data-validate = "Le mot de passe est necessaire">
-						<input class="input100" type="password" name="mdp" placeholder="Password">
+						<input class="input100" type="password" name="mdp" placeholder="Mot de passe">
 						<span class="focus-input100"></span>
 					</div>
 					<!--===============================================================================================-->
 
 					<!--MDP2===============================================================================================-->
-					<div class="wrap-input100 validate-input m-b-16" data-validate = "Le mot de passe est necessaire">
-						<input class="input100" type="password" name="mdp" placeholder="Password">
+					<div class="wrap-input100 validate-input m-b-16" data-validate = "Vous devez retaper le Mot de passe">
+						<input class="input100" type="password" name="mdp2" placeholder="Ressaisir le mot de passe">
 						<span class="focus-input100"></span>
 					</div>
 					<!--===============================================================================================-->
