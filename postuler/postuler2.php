@@ -9,26 +9,37 @@ require '../vendor/phpmailer/phpmailer/src/SMTP.php';
 require '../vendor/autoload.php';
 session_start ();
 
+if($_POST['mail'] == $_POST['mail2']){
+
+  $email=$_POST['mail'];
+
   $mail = new PHPMailer(true);
 
+  try {
 
-echo md5(c4ca4238a0b923820dcc509a6f75849b);
+    $mail->SMTPDebug = SMTP::DEBUG_SERVER;
+    $mail->isSMTP();
+    $mail->Host       = 'smtp.gmail.com';
+    $mail->SMTPAuth   = true;
+    $mail->Username   = 'projetweb932@gmail.com';
+    $mail->Password   = 'projetweb932';
+    $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+    $mail->Port       = 587;
 
-    $from = "projetweb932@gmail.com";
+    $mail->setFrom('projetweb932@gmail.com', 'Mailer');
+    $mail->addAddress($email, 'user');
 
-    $to = "e.birba@lprs.fr";
+    $mail->isHTML(true);
+    $mail->Subject = 'Postuler';
+    $mail->Body    = 'Postulation acceptee!';
+    $mail->AltBody = 'Postulation acceptee!';
 
-    $subject = "Vérification PHP mail";
+    $mail->send();
+    echo 'Message has been sent';
+  }
 
-    $message = "PHP mail marche";
-
-    $headers = "From:" . $from;
-
-    mail($to,$subject,$message, $headers);
-
-    echo "L'email a été envoyé.";
-
-
-
-
+  catch (Exception $e) {
+    echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+  }
+}
 ?>
