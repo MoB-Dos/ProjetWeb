@@ -31,8 +31,8 @@ if($_POST['mail'] == $_POST['mail2']){
 
     $mail->isHTML(true);
     $mail->Subject = 'Postuler';
-    $mail->Body    = 'Postulation acceptée!';
-    $mail->AltBody = 'Postulation acceptée!';
+    $mail->Body    = 'Postulation acceptee!';
+    $mail->AltBody = 'Postulation acceptee!';
 
     $mail->send();
     echo 'Message has been sent';
