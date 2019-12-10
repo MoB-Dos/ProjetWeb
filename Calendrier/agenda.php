@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html>
+<?php session_start() ?>
 <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
 <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 <link href="agenda.css" rel="stylesheet" media="all" type="text/css">
-<!------ Include the above in your HEAD tag ---------->
+<!--- Include the above in your HEAD tag ---------->
 
 <div class="container theme-showcase">
   <h1>Calendrier</h1>
@@ -433,10 +434,40 @@ var data = [],
   //  if (h < 18) { h = 0; m = 0; } else { h = Math.max(h - 24, 0) + 8; }
   //  end = !j ? null : new Date(y, m, d + j, h + 2, m);
     //data.push({ title: names[c1 % names.length], start: new Date(2019, m, d, h, m), end: end, allDay: !(i % 6), text: slipsum[c % slipsum.length ]  });
+    //resumer de ce que je veux faire : base de données ou on saisit les données des events sur l'html puis ici on fait une boucle avec id tant que event est pas 0 (isset)
   }
 <?php $mois=$_POST['mois']; ?>
   data.push({ title: names[<?php echo $_POST['event'] ?> % names.length], start: new Date(<?php echo $_POST['annee'] ?>, <?php echo $mois; ?> , <?php echo $_POST['jour']; ?>, <?php echo $_POST['heures']; ?>), end: end, allDay: !(i % 6), text: slipsum[c % slipsum.length ]  });
 //janvier = 0
+
+
+//Sélection des données dans la table agenda
+for(i = 0; i < 2; i++) {
+  <?php
+  $i=$i+1;
+  try{
+  $bdd= new PDO('mysql:host=localhost;dbname=projetweb;charset=utf8','root','');
+  }
+
+  catch(Exception $e){
+    die('Erreur:'.$e->getMessage());
+    }
+
+$reponse=$bdd->prepare ('SELECT * FROM agenda where id=?');
+$reponse->execute(array($i));
+$donne=$reponse->fetch();
+$annee=$donne['annee'];
+$mois=$donne['mois'];
+$jour=$donne['jour'];
+$heures=$donne['heures'];
+$minutes=$donne['minutes'];
+$event_id=$donne['event_id'];
+var_dump($donne);
+?>
+data.push({ title: names[<?php echo $_POST['event'] ?> % names.length], start: new Date(<?php echo $annee ?>, <?php echo $mois; ?> , <?php echo $jour; ?>, <?php echo $heures; ?>), end: end, allDay: !(i % 6), text: slipsum[c % slipsum.length ]  });
+
+}
+
   data.sort(function(a,b) { return (+a.start) - (+b.start); });
 
 //data must be sorted by start date
@@ -446,4 +477,6 @@ $('#holder').calendar({
   data: data
 });
 </script>
+
+
 </html>
