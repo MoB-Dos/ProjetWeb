@@ -1,6 +1,9 @@
 <?php
 //Démarrage de la session
 session_start();
+$lieneleve = "'../Accueil/AccueilEleve.php'";
+$lienparent = "'../Accueil/AccueilEleve.php'";
+$lienadmin = "'../Accueil/AccueilEleve.php'";
 ?>
 <!-- Formulaire d'incription -->
 <form method="post" action="Traitement.php">
@@ -31,7 +34,19 @@ Retapez votre mot de passe:
 <input type="password" name="mdp2" required><br><br>
 
 <!--Boutons de validation et de retour-->
-	<input type="button" value="Annuler" onclick="window.location.href='http://localhost/Projet/GIT/ProjetWeb/Accueil/Accueil.php'"/>
+<?php
+if ($donnee['profil_id']=='1'){
+	echo '<br><br><input type="button" value="Retour" onclick="window.location.href='.$lieneleve.'"/>';
+}
+
+if ($donnee['profil_id']=='2'){
+	echo '<br><br><input type="button" value="Retour" onclick="window.location.href='.$lienparent.'"/>';
+}
+
+if ($donnee['profil_id']=='3'){
+	echo '<br><br><input type="button" value="Retour" onclick="window.location.href='.$lienadmin.'"/>';
+}
+	?>
 	<input type="submit" value="Envoyer"/><br><br>
 
 </form>

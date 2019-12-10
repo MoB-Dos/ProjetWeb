@@ -1,0 +1,40 @@
+<<!DOCTYPE html>
+<html>
+<form method="post" action="agenda.php">
+
+
+    <h3>Bienvenue Administrateur<h3>
+      <h4>Veuillez saisir l'evenementà ajouter<h4>
+
+Annee:
+<input type="text" name="annee" required/><br>
+
+Mois:
+<input type="text" name="mois" required/><br>
+
+Jour:
+<input type="text" name="jour" required/><br>
+
+heures:
+<input type="text" name="heures" required/><br>
+
+minutes:
+<input type="text" name="minutes" required/><br>
+
+<form action="AffRadioPost.php" method="POST" name="formulaire"><br>
+Veuillez saisir votre evenement: <br>
+<input type="radio" name="event" value="0"> Tout les jours sur BOBFM TV<br>
+<input type="radio" name="event" value="1"> Conseil de classe <br>
+<input type="radio" name="event" value="2"> Anniv random<br>
+<input type="radio" name="event" value="3"> Evenement unique<br>
+<input type="radio" name="event" value="4"> formation<br>
+<input type="radio" name="event" value="5"> Reunion<br>
+<input type="radio" name="event" value="6"> Mr. Robert Lenon<br>
+<input type="radio" name="event" value="7"> Conseil intermediaire<br>
+<input type="radio" name="event" value="8"> VA-11-A-11-A<br>
+
+<input type="submit" value="Parametre acceptable"/>
+</form>
+
+
+</html>
