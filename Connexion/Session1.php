@@ -22,8 +22,20 @@ foreach ($donne as $value) {
       //On enregistre login et prénom dans la session
       $_SESSION['login'] = $_POST['login'];
       $_SESSION['prenom'] = $_POST['prenom'];
-      //Renvoi vers la page Accueil
-      header ('location: http://localhost/Projet/GIT/ProjetWeb/Accueil/Accueil.php');
+
+      if ($value['profil_id'] == '1') {
+        //Renvoi vers la page AccueilEleve
+        header ('location: http://localhost/Projet/GIT/ProjetWeb/Accueil/AccueilEleve.php');
+      }
+
+      if ($value['profil_id'] == '2') {
+        //Renvoi vers la page AccueilEleve
+        header ('location: http://localhost/Projet/GIT/ProjetWeb/Accueil/AccueilParent.php');
+      }
+      if ($value['profil_id'] == '3') {
+        //Renvoi vers la page AccueilEleve
+        header ('location: http://localhost/Projet/GIT/ProjetWeb/Accueil/AccueilAdmin.php');
+      }
     }
     //Sinon on affiche une boite de dialogue d'alerte
     else {
