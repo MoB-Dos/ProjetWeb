@@ -19,7 +19,7 @@ $donnee = $req->fetch();
 ?>
 
 <!-- Formulaire de modification -->
-<form method="post" action="TraitementModif.php">
+<form method="post" action="TraitementModifAdmin.php">
 
 	Votre nom:
 	<input type="text" name="nom" value=<?php echo $_SESSION['login'];?> required/>
