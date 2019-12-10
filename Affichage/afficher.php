@@ -18,14 +18,16 @@ $donne=$req->fetchall();
 foreach ($donne as $value) {
   if($value['profil_id'] == '1'){
     echo $value['nom']." ".$value['prenom'].'<br><br>'."Mail :"." ".$value['mail'].'<br><br>'."Téléphone :"." ".$value['tel'].'<br><br>'."Adresse :"." ".$value['adresse'].'<br><br>'."Etudiant en :"." ".$value['classe'];
+    <!-- Bouton de retour -->
+    echo '<br><br><input type="button" value="Retour" onclick="window.location.href=http://localhost/Projet/GIT/ProjetWeb/Accueil/AccueilEleve.php"/>';
   }
   if($value['profil_id'] == '2'){
     echo $value['nom']." ".$value['prenom'].'<br><br>'."Mail :"." ".$value['mail'].'<br><br>'."Téléphone :"." ".$value['tel'].'<br><br>'."Adresse :"." ".$value['adresse'].'<br><br>'."Parent d'un élève en :"." ".$value['classe'];
+    echo '<br><br><input type="button" value="Retour" onclick="window.location.href=http://localhost/Projet/GIT/ProjetWeb/Accueil/AccueilParent.php"/>';
   }
   if($value['profil_id'] == '3'){
     echo $value['nom']." ".$value['prenom'].'<br><br>'."Mail :"." ".$value['mail'].'<br><br>'."Téléphone :"." ".$value['tel'].'<br><br>'."Adresse :"." ".$value['adresse'].'<br><br>'." "."Administrateur";
+    echo '<br><br><input type="button" value="Retour" onclick="window.location.href=http://localhost/Projet/GIT/ProjetWeb/Accueil/AccueilAdmin.php"/>';
   }
 }
 ?>
-<!-- Bouton de retour -->
-<br><br><input type="button" value="Retour" onclick="window.location.href='http://localhost/Projet/GIT/ProjetWeb/Accueil/Accueil.php'"/>
