@@ -55,7 +55,7 @@ if ($donne) {
 else {
   if ($mdp == $mdp2) {
     $req = $bdd->prepare('INSERT INTO utilisateur (nom, prenom, mail, tel, adresse, classe, profil_id, mdp) VALUES (?,?,?,?,?,?,?,?)');
-    $req -> execute(array($nom, $prenom, $email, $tel, $adresse, $classe, '3', $mdp));
+    $req -> execute(array($nom, $prenom, $email, $tel, $adresse, NULL, '3', $mdp));
 
     //Envoi du mail de confirmation
     $mail = new PHPMailer(true);
@@ -86,7 +86,7 @@ else {
           }
 
     //Renvoi vers la page Connexion
-    header("location:http://localhost/Projet/GIT/ProjetWeb/Connexion/Connexion.php");
+    header("location:http://localhost/Projet/GIT/ProjetWeb/TemplateConnexion/ConnexionTem.html");
   }
 
   //Sinon, on affiche une boite de dialogue d'erreur

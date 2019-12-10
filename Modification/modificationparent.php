@@ -1,9 +1,6 @@
 <?php
 //Démarrage de la session
 session_start();
-$lieneleve = "'../Accueil/AccueilEleve.php'";
-$lienparent = "'../Accueil/AccueilEleve.php'";
-$lienadmin = "'../Accueil/AccueilEleve.php'";
 
 //Connexion à la base de données projetweb
 try{
@@ -42,7 +39,7 @@ $donnee = $req->fetch();
 	<input type="text" name="adresse" value='<?php echo $donnee['adresse'];?>'><br><br>
 
   Votre classe:
-  <select name="classe">
+  <select name="classe" value='<?php echo $donnee['classe'];?>'>
 	<?php
 	try{
 	$bdd= new PDO('mysql:host=localhost;dbname=projetweb;charset=utf8','root','');
@@ -61,27 +58,10 @@ $donnee = $req->fetch();
 	?>
 </select><br><br>
 
-Votre profil:
-	<select name="profil_id">
-			<option>etudiant</option>;
-			<option>parent</option>;
-	</select><br><br>
+Votre profil : Parent <br><br>
 
 <!-- Boutons de validation et de retour-->
-<?php
-if ($donnee['profil_id']=='1'){
-  echo '<br><br><input type="button" value="Retour" onclick="window.location.href='.$lieneleve.'"/>';
-}
-
-if ($donnee['profil_id']=='2'){
-  echo '<br><br><input type="button" value="Retour" onclick="window.location.href='.$lienparent.'"/>';
-}
-
-if ($donnee['profil_id']=='3'){
-  echo '<br><br><input type="button" value="Retour" onclick="window.location.href='.$lienadmin.'"/>';  
-}
-  ?>
-
+<input type="button" value="Retour" onclick="window.location.href='../Accueil/AccueilParent.php'"/>
 
 	<input type="submit" value="Envoyer"/>
 
