@@ -2,8 +2,8 @@
 //Demarrage de la session
 session_start();
 $lieneleve = "'../Accueil/AccueilEleve.php'";
-$lienparent = "'../Accueil/AccueilEleve.php'";
-$lienadmin = "'../Accueil/AccueilEleve.php'";
+$lienparent = "'../Accueil/AccueilParent.php'";
+$lienadmin = "'../Accueil/AccueilAdmin.php'";
 //Connexion à la base de donnees projetweb
 try{
 $bdd= new PDO('mysql:host=localhost;dbname=projetweb;charset=utf8','root','');

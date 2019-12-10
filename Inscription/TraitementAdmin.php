@@ -18,17 +18,8 @@ $prenom=$_POST['prenom'];
 $email=$_POST['mail'];
 $tel=$_POST['tel'];
 $adresse=$_POST['adresse'];
-$classe=$_POST['classe'];
-$profil_id=$_POST['profil_id'];
 $mdp=md5($_POST['mdp']);
 $mdp2=md5($_POST['mdp2']);
-
-if ($profil_id=='etudiant') {
-  $profil_id='1';
-}
-elseif ($profil_id=='parent') {
-  $profil_id='2';
-}
 
 //Connexion à la base de données projetweb
 try{
@@ -55,7 +46,7 @@ if ($donne) {
 else {
   if ($mdp == $mdp2) {
     $req = $bdd->prepare('INSERT INTO utilisateur (nom, prenom, mail, tel, adresse, classe, profil_id, mdp) VALUES (?,?,?,?,?,?,?,?)');
-    $req -> execute(array($nom, $prenom, $email, $tel, $adresse, NULL, '3', $mdp));
+    $req -> execute(array($nom, $prenom, $email, $tel, $adresse, '', '3', $mdp));
 
     //Envoi du mail de confirmation
     $mail = new PHPMailer(true);
