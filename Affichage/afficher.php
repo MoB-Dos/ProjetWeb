@@ -18,7 +18,7 @@ $donne=$req->fetchall();
 foreach ($donne as $value) {
   if($value['profil_id'] == '1'){
     echo $value['nom']." ".$value['prenom'].'<br><br>'."Mail :"." ".$value['mail'].'<br><br>'."Téléphone :"." ".$value['tel'].'<br><br>'."Adresse :"." ".$value['adresse'].'<br><br>'."Etudiant en :"." ".$value['classe'];
-    <!-- Bouton de retour -->
+    //Bouton de retour
     echo '<br><br><input type="button" value="Retour" onclick="window.location.href=http://localhost/Projet/GIT/ProjetWeb/Accueil/AccueilEleve.php"/>';
   }
   if($value['profil_id'] == '2'){
