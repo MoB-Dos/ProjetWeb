@@ -1,18 +1,18 @@
 <?php
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+use PHPMailer\PHPMailer\SMTP;
+
+require '../vendor/phpmailer/phpmailer/src/Exception.php';
+require '../vendor/phpmailer/phpmailer/src/PHPMailer.php';
+require '../vendor/phpmailer/phpmailer/src/SMTP.php';
+require '../vendor/autoload.php';
+session_start ();
 
 if($_POST['mail'] == $_POST['mail2']){
 
   $email=$_POST['mail'];
-  use PHPMailer\PHPMailer\PHPMailer;
-  use PHPMailer\PHPMailer\Exception;
-  use PHPMailer\PHPMailer\SMTP;
-
-  require '../vendor/phpmailer/phpmailer/src/Exception.php';
-  require '../vendor/phpmailer/phpmailer/src/PHPMailer.php';
-  require '../vendor/phpmailer/phpmailer/src/SMTP.php';
-  require '../vendor/autoload.php';
-  session_start ();
-
+  
   $mail = new PHPMailer(true);
 
   try {
