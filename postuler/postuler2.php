@@ -12,7 +12,7 @@ session_start ();
 if($_POST['mail'] == $_POST['mail2']){
 
   $email=$_POST['mail'];
-  
+
   $mail = new PHPMailer(true);
 
   try {
@@ -30,9 +30,9 @@ if($_POST['mail'] == $_POST['mail2']){
     $mail->addAddress($email, 'user');
 
     $mail->isHTML(true);
-    $mail->Subject = 'Inscription';
-    $mail->Body    = 'Inscription reussie!';
-    $mail->AltBody = 'Inscription reussie!';
+    $mail->Subject = 'Postuler';
+    $mail->Body    = 'Postulation acceptée!';
+    $mail->AltBody = 'Postulation acceptée!';
 
     $mail->send();
     echo 'Message has been sent';
