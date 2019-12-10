@@ -22,7 +22,7 @@ $profil_id=$_POST['profil_id'];
 
 
 //Modification dans la table utilisateur
-  $req = $bdd->prepare('UPDATE utilisateur SET nom = ?, prenom = ?, mail = ?, tel = ?, adresse = ?, classe = ?  profil_id = ? WHERE nom= ? AND prenom = ?');
+  $req = $bdd->prepare('UPDATE utilisateur SET nom = ?, prenom = ?, mail = ?, tel = ?, adresse = ?, classe = ?,  profil_id = ? WHERE nom= ? AND prenom = ?');
   $a = $req -> execute(array($nom, $prenom, $mail, $tel, $adresse, $classe, '2', $_SESSION['login'], $_SESSION['prenom']));
 
   //Renvoi vers la page connexion

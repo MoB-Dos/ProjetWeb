@@ -41,7 +41,7 @@ foreach ($donne as $value) {
     else {
       echo '<body onLoad="alert(\'Accès refusé\')">';
 
-      echo '<meta http-equiv="refresh" content="0;URL=Connexion.php">';
+      echo '<meta http-equiv="refresh" content="0;URL=http://localhost/Projet/GIT/ProjetWeb/TemplateConnexion/ConnexionTem.html">';
     }
   }
   //Sinon on demande à remplir les champs vides
