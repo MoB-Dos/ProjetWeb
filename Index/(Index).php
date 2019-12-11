@@ -30,8 +30,8 @@
                </div>
                <div class="menu">
                   <ul>
-                     <li><a href="#"><span class="fa fa-home"></span> Acceuil</a></li>
-                     <li><a href="#"><span class="fas fa-graduation-cap"></span>Formations</a></li>
+                     <li><a href="(Index).php"><span class="fa fa-home"></span> Acceuil</a></li>
+                     <li><a href="../Formation/AccueilForma.html"><span class="fas fa-graduation-cap"></span>Formations</a></li>
                      <li><a href="#"><span class="fas fa-building"></span> Relations entreprises</a></li>
                      <li><a href="#"><span class="fas fa-map-marker-alt"></span> Vie de l'établisement</a></li>
                      <li><a href="../TemplateConnexion/ConnexionTem.html"><span class="fas fa-sign-in-alt"> </span> Connexion</a></li>
