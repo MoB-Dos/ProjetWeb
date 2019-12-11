@@ -34,7 +34,7 @@
                      <li><a href="#"><span class="fas fa-graduation-cap"></span>Formations</a></li>
                      <li><a href="#"><span class="fas fa-building"></span> Relations entreprises</a></li>
                      <li><a href="#"><span class="fas fa-map-marker-alt"></span> Vie de l'établisement</a></li>
-                     <li><a href="TemplateConnexion/ConnexionTem.html"><span class="fas fa-sign-in-alt"> </span> Connexion</a></li>
+                     <li><a href="../TemplateConnexion/ConnexionTem.html"><span class="fas fa-sign-in-alt"> </span> Connexion</a></li>
                      <li><a href="#"><span class="fas fa-sign-in-alt"> </span> Inscription</a></li>
                   </ul>
                </div>
