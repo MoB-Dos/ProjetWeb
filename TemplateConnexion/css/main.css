@@ -1,7 +1,4 @@
 
-
-
-
 /*//////////////////////////////////////////////////////////////////
 [ FONT ]*/
 
@@ -159,6 +156,7 @@ iframe {
   background: #fff;
   border-radius: 10px;
   position: relative;
+  padding-bottom: 50px;
 }
 
 
