@@ -25,7 +25,7 @@
                </div>
                <div class="logo">
                  <p>
-                   <a href="#"><img src="Image/Logo1.png" alt="ton image"/></a>
+                   <a href="(Index).php"><img src="Image/Logo1.png" alt="ton image"/></a>
                   </p>
                </div>
                <div class="menu">
@@ -35,7 +35,7 @@
                      <li><a href="#"><span class="fas fa-building"></span> Relations entreprises</a></li>
                      <li><a href="#"><span class="fas fa-map-marker-alt"></span> Vie de l'établisement</a></li>
                      <li><a href="../TemplateConnexion/ConnexionTem.html"><span class="fas fa-sign-in-alt"> </span> Connexion</a></li>
-                     <li><a href="#"><span class="fas fa-sign-in-alt"> </span> Inscription</a></li>
+                     <li><a href="../TemplateInscription/InscriptionTem.html"><span class="fas fa-sign-in-alt"> </span> Inscription</a></li>
                   </ul>
                </div>
             </nav>
