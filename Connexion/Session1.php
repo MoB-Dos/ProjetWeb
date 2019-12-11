@@ -9,34 +9,43 @@ $bdd= new PDO('mysql:host=localhost;dbname=projetweb;charset=utf8','root','');
 catch(Exception $e){
   die('Erreur:'.$e->getMessage());
 }
+$a = md5($_POST['mdp']);
+
 //Sélection dans la table utilisateur
-$reponse=$bdd->query('SELECT * FROM utilisateur');
-$donne=$reponse->fetchall();
+$reponse=$bdd->prepare('SELECT * FROM utilisateur WHERE nom = :nom AND mdp = :mdp');
+$reponse->execute(array(
+  'nom' => $_POST['login'],
+    'mdp' => md5($_POST['mdp'])
+
+));
+$donne=$reponse->fetch();
 
 //Pour chaque donnée
-foreach ($donne as $value) {
+
   //Si les zones login et mdp sont entrées
   if (isset($_POST['login']) && isset($_POST['mdp'])) {
+
     //Si les données correspondent au données de la base de données
-    if ($value['nom'] == $_POST['login'] && $value['mdp'] == md5($_POST['mdp']) && $value['prenom'] == $_POST['prenom']) {
+    if ($donne['nom'] == $_POST['login'] && $donne['mdp'] == md5($_POST['mdp']) && $donne['prenom'] == $_POST['prenom']) {
       //On enregistre login et prénom dans la session
+      
       $_SESSION['login'] = $_POST['login'];
       $_SESSION['prenom'] = $_POST['prenom'];
 
-      if ($value['profil_id'] == '1') {
+      if ($donne['profil_id'] == '1') {
         //Renvoi vers la page AccueilEleve
         header ('location: http://localhost/Projet/GIT/ProjetWeb/Accueil/AccueilEleve.php');
       }
 
-      if ($value['profil_id'] == '2') {
+      if ($donne['profil_id'] == '2') {
         //Renvoi vers la page AccueilEleve
         header ('location: http://localhost/Projet/GIT/ProjetWeb/Accueil/AccueilParent.php');
       }
-      if ($value['profil_id'] == '3') {
+      if ($donne['profil_id'] == '3') {
         //Renvoi vers la page AccueilEleve
         header ('location: http://localhost/Projet/GIT/ProjetWeb/Accueil/AccueilAdmin.php');
       }
-    }
+}
     //Sinon on affiche une boite de dialogue d'alerte
     else {
       echo '<body onLoad="alert(\'Accès refusé\')">';
@@ -48,5 +57,5 @@ foreach ($donne as $value) {
   else {
     echo 'Veuillez remplir les champs vides';
   }
-}
+
 ?>

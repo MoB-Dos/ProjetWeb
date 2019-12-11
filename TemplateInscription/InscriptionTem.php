@@ -30,7 +30,7 @@
 <body>
 
 	<div class="limiter">
-		<div class="container-login100">
+		<div class="container-login100" style="background-image: url('images/Fond/1.jpg');">
 			<div class="wrap-login100 p-t-50 p-b-90">
 
 				<form class="login100-form validate-form flex-sb flex-w" method="post" action="../Inscription/Traitement.php">
@@ -54,7 +54,7 @@
 
 					<!--Mail===============================================================================================-->
 					<div class="wrap-input100 validate-input m-b-16" data-validate = "Le Mail est necessaire">
-						<input class="input100" type="text" name="mail" placeholder="Mail">
+						<input class="input100" type="mail" name="mail" placeholder="Mail">
 						<span class="focus-input100"></span>
 					</div>
 					<!--===============================================================================================-->
@@ -73,16 +73,6 @@
 					</div>
 					<!--===============================================================================================-->
 
-					<!--profil===============================================================================================-->
-					<div class="input100" data-validate = "L'Adresse est necessaire" style="background-color: #e6e6e6;margin-bottom: 25px;">
-						<select name="profil_id" class="input100" style="border : none;" placeholder="Adresse">
-								<option value="0" selected disabled> <p class="placeholder">Profil</p></option>
-								<option>Etudiant</option>;
-								<option>Parent</option>;
-						</select><br><br>
-						<span class="focus-input100"></span>
-					</div>
-					<!--===============================================================================================-->
 
 					<!--MDP================================================================================================-->
 					<div class="wrap-input100 validate-input m-b-16" data-validate = "Le mot de passe est necessaire">
@@ -97,6 +87,44 @@
 						<span class="focus-input100"></span>
 					</div>
 					<!--===============================================================================================-->
+
+					<!--Classe===============================================================================================-->
+					<div class="wrap-input100 validate-input m-b-16" style="background-color:white;margin-bottom: -30px;">
+						<select name="classe" class="input100" style="border : none;background-color: #e6e6e6;">
+							<option value="0" selected disabled style="color: #bbbbbb;">choissisez votre Classe !</option>
+						<?php
+						try{
+						$bdd= new PDO('mysql:host=localhost;dbname=projetweb;charset=utf8','root','');
+						}
+
+						catch(Exception $e){
+							die('Erreur:'.$e->getMessage());
+						}
+
+						$reponse=$bdd->query('SELECT classe FROM classe');
+						$donne=$reponse->fetchall();
+						foreach ($donne as $value) {
+							echo '<option>'.$value['classe'].'</option>';
+						}
+
+						?>
+					</select><br><br>
+					<span class="focus-input100"></span>
+					</div>
+					<!--====================================================================================================-->
+
+					<!--profil===============================================================================================-->
+
+					<div class="wrap-input100 validate-input m-b-16" style="background-color:white;margin-bottom: -10px;">
+						<select name="profil_id" class="input100" style="border : none;background-color: #e6e6e6;" placeholder="Adresse">
+								<option value="0" selected disabled style="color: #bbbbbb;">choissisez votre Profil !</option>
+								<option value="1" style="color: #403866;">Etudiant</option>;
+								<option value="2" style="color: #403866;">Parent</option>;
+						</select><br><br>
+						<span class="focus-input100"></span>
+					</div>
+
+					<!--====================================================================================================-->
 
 					<!--Submit===============================================================================================-->
 					<div class="container-login100-form-btn m-t-17">
