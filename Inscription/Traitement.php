@@ -86,7 +86,7 @@ else {
           }
 
     //Renvoi vers la page Connexion
-    header("location:http://localhost/Projet/GIT/ProjetWeb/Connexion/Connexion.php");
+    header("location:http://localhost/Projet/GIT/ProjetWeb/Connexion/connexion.php");
   }
 
   //Sinon, on affiche une boite de dialogue d'erreur
