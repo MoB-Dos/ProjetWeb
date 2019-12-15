@@ -19,8 +19,11 @@
   <script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'></script>
   <link rel="stylesheet" href="Footer.Nav/Nav/Css.css">
   <script  src="./Footer.Nav/Nav/JS.js"></script>
+  <link rel="stylesheet" href="bootstrap-footer-design/dist/style.css">
 
   <?php  require_once('Footer.Nav/Nav/Html.html') ?>
+
+  <?php  require_once('bootstrap-footer-design/dist/index.html') ?>
 
   </head>
   <body style="background-color : grey">
