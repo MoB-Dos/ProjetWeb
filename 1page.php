@@ -19,55 +19,25 @@
   <script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'></script>
   <link rel="stylesheet" href="Footer.Nav/Nav/Css.css">
   <script  src="./Footer.Nav/Nav/JS.js"></script>
-  <link rel="stylesheet" href="bootstrap-footer-design/dist/style.css">
+  <link rel="stylesheet" href="Footer.Nav/Footer/dist/style.css">
 
   <?php  require_once('Footer.Nav/Nav/Html.html') ?>
 
-  <?php  require_once('bootstrap-footer-design/dist/index.html') ?>
+  <?php  require_once('Footer.Nav/Footer/dist/index.html') ?>
 
   </head>
-  <body style="background-color : grey">
+  <body style="background-color : black">
 
 <div class="btn4">
-    <div class="Widget1" style="width:500px;height:100px;border:1px solid #000;"></div>
+    <div class="Widget1" style="width:500px;height:100px;border:1px solid #000;"><a href="Informationstage.php" class="bouton1"style="width:500px;height:100px;border:1px solid #000; display : inline-block"><p style="color:#0c57a0;font-size: 3em;text-decoration:none">Information Stage</p></a></div>
 
-    <div class="Widget2" style="width:500px;height:100px;border:1px solid #000;"></div>
+    <div class="Widget2" style="width:500px;height:100px;border:1px solid #000;"><a href="Projet.php" class="bouton2"style="width:500px;height:100px;border:1px solid #000; display : inline-block"><p style="color:#0c57a0;font-size: 3em;">Projet Réalisés</p></a></div>
 
-    <div class="Widget3" style="width:500px;height:100px;border:1px solid #000;"></div>
+    <div class="Widget3" style="width:500px;height:100px;border:1px solid #000;"><a href="https://0931573e.index-education.net/pronote/" class="bouton3"style="width:500px;height:100px;border:1px solid #000; display : inline-block"></a></div>
 </div>
 
-<div class="content">
-<p>
-eazetaztazrtaetazertzezefgzeryetyeruyeryurtyurtyiurtyrirtyiityiirtyiryirtyuirtity
-eazetaztazrtaetazertzezefgzeryetyeruyeryurtyurtyiurtyrirtyiityiirtyiryirtyuirtity
-eazetaztazrtaetazertzezefgzeryetyeruyeryurtyurtyiurtyrirtyiityiirtyiryirtyuirtity
-eazetaztazrtaetazertzezefgzeryetyeruyeryurtyurtyiurtyrirtyiityiirtyiryirtyuirtity
-eazetaztazrtaetazertzezefgzeryetyeruyeryurtyurtyiurtyrirtyiityiirtyiryirtyuirtity
-eazetaztazrtaetazertzezefgzeryetyeruyeryurtyurtyiurtyrirtyiityiirtyiryirtyuirtity
-eazetaztazrtaetazertzezefgzeryetyeruyeryurtyurtyiurtyrirtyiityiirtyiryirtyuirtity
-eazetaztazrtaetazertzezefgzeryetyeruyeryurtyurtyiurtyrirtyiityiirtyiryirtyuirtity
-eazetaztazrtaetazertzezefgzeryetyeruyeryurtyurtyiurtyrirtyiityiirtyiryirtyuirtity
-eazetaztazrtaetazertzezefgzeryetyeruyeryurtyurtyiurtyrirtyiityiirtyiryirtyuirtity
-eazetaztazrtaetazertzezefgzeryetyeruyeryurtyurtyiurtyrirtyiityiirtyiryirtyuirtity
-eazetaztazrtaetazertzezefgzeryetyeruyeryurtyurtyiurtyrirtyiityiirtyiryirtyuirtity
-eazetaztazrtaetazertzezefgzeryetyeruyeryurtyurtyiurtyrirtyiityiirtyiryirtyuirtity
-eazetaztazrtaetazertzezefgzeryetyeruyeryurtyurtyiurtyrirtyiityiirtyiryirtyuirtity
-eazetaztazrtaetazertzezefgzeryetyeruyeryurtyurtyiurtyrirtyiityiirtyiryirtyuirtity
-eazetaztazrtaetazertzezefgzeryetyeruyeryurtyurtyiurtyrirtyiityiirtyiryirtyuirtity
-eazetaztazrtaetazertzezefgzeryetyeruyeryurtyurtyiurtyrirtyiityiirtyiryirtyuirtity
-eazetaztazrtaetazertzezefgzeryetyeruyeryurtyurtyiurtyrirtyiityiirtyiryirtyuirtity
-eazetaztazrtaetazertzezefgzeryetyeruyeryurtyurtyiurtyrirtyiityiirtyiryirtyuirtity
-eazetaztazrtaetazertzezefgzeryetyeruyeryurtyurtyiurtyrirtyiityiirtyiryirtyuirtity
-eazetaztazrtaetazertzezefgzeryetyeruyeryurtyurtyiurtyrirtyiityiirtyiryirtyuirtity
-eazetaztazrtaetazertzezefgzeryetyeruyeryurtyurtyiurtyrirtyiityiirtyiryirtyuirtity
-eazetaztazrtaetazertzezefgzeryetyeruyeryurtyurtyiurtyrirtyiityiirtyiryirtyuirtity
-eazetaztazrtaetazertzezefgzeryetyeruyeryurtyurtyiurtyrirtyiityiirtyiryirtyuirtity
-eazetaztazrtaetazertzezefgzeryetyeruyeryurtyurtyiurtyrirtyiityiirtyiryirtyuirtity
-eazetaztazrtaetazertzezefgzeryetyeruyeryurtyurtyiurtyrirtyiityiirtyiryirtyuirtity
-eazetaztazrtaetazertzezefgzeryetyeruyeryurtyurtyiurtyrirtyiityiirtyiryirtyuirtity
 
-</p>
-</div>
+
 
   </body>
 </html>

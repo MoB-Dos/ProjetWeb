@@ -1,7 +1,15 @@
 .footer {
   background: #152F4F;
   color: white;
+  bottom : 0;
+  position:absolute;
+  bottom:auto;
+  width: 100%;
+  padding-top:50px;
+  height:500px;
 }
+
+
 .footer .links ul {
   list-style-type: none;
 }

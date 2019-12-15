@@ -1,11 +1,49 @@
-.body{
+a.bouton1 {
+    color: white;
 
-background-color: black;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+    padding: 5px;
+  }
+  a.bouton1:hover {
+    background-color: #fff568;
+  }
 
+  a.bouton2 {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      text-align: center;
+      padding: 5px;
+    }
+    a.bouton2:hover {
+      background-color: #6495ED;
+    }
+
+    a.bouton3 {
+        color: white;
+        background-color: #000080;
+        background: url(Image/Logo-Pronote.png) no-repeat 50% 50%;
+        text-decoration: none;
+        font-weight: bold;
+        text-align: center;
+        padding: 5px;
+      }
+      a.bouton3:hover {
+        background-color: #3b9f42;
+      }
+
+
+.Image{
+  width: 100%;
+  height: 100vh;
+  /*background: url(Footer.Nav/Nav/Image/FondBleu.png) no-repeat 50% 50%;*/
+  background-size: cover;
 }
 
 .btn4{
-  top :350px;
+  top :590px;
   left:220px;
   position:absolute;
   margin: auto;
