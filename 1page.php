@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Index</title>
+    <title>test</title>
 
   <link rel="stylesheet" href="1page.css">
   <?php  require_once('Footer.Nav/Nav/Html.html') ?>
@@ -27,8 +27,8 @@
 
       <div class="Widget3"><a href="https://0931573e.index-education.net/pronote/" class="bouton3"style="width:500px;height:100px;border:2px solid #000; display : inline-block"></a></div>
 
-      </div>
-      
+    </div>
+
   </div>
 
   <?php  require_once('Footer.Nav/Footer/dist/index.html') ?>
