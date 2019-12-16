@@ -8,8 +8,9 @@
   padding-top:50px;
   height:500px;
 }
-
-
+.body{
+  position: relative;
+}
 .footer .links ul {
   list-style-type: none;
 }

@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> 70cabbe647552daa581815090a2bc825b3727603
 /*//////////////////////////////////////////////////////////////////
 [ FONT ]*/
 
@@ -15,6 +18,18 @@
 /*//////////////////////////////////////////////////////////////////
 [ RESTYLE TAG ]*/
 
+.MenuDeroulant{
+
+background-color: #e6e6e6;
+
+}
+
+.placeholder{
+color: #a9a9a9;
+ width: 205px;
+ height: 25px;
+}
+
 * {
 	margin: 0px;
 	padding: 0px;
@@ -24,6 +39,7 @@
 body, html {
 	height: 100%;
 	font-family: Ubuntu-Regular, sans-serif;
+  background-image: url(images/Fond/1.jpg);
 }
 
 /*---------------------------------------------*/
@@ -45,7 +61,7 @@ a:focus {
 
 a:hover {
 	text-decoration: none;
-  color: #403866;
+  color: #2168c8;
 }
 
 /*---------------------------------------------*/
@@ -152,13 +168,12 @@ iframe {
 
 
 .wrap-login100 {
-  width: 390px;
+  width: 500px;
   background: #fff;
   border-radius: 10px;
   position: relative;
   padding-bottom: 50px;
 }
-
 
 /*==================================================================
 [ Form ]*/
@@ -170,7 +185,7 @@ iframe {
 .login100-form-title {
   font-family: Ubuntu-Bold;
   font-size: 30px;
-  color: #403866;
+  color: #3719c6;
   line-height: 1.2;
   text-transform: uppercase;
   text-align: center;
@@ -185,8 +200,9 @@ iframe {
 [ Input ]*/
 
 .wrap-input100 {
-  width: 100%;
-  position: relative;
+  width: 90%;
+  position: center;
+  margin-left: 27px;
   background-color: #e6e6e6;
   border: 1px solid transparent;
   border-radius: 3px;
@@ -196,7 +212,7 @@ iframe {
 /*---------------------------------------------*/
 .input100 {
   font-family: Ubuntu-Bold;
-  color: #403866;
+  color: #2c17d8;
   line-height: 1.2;
   font-size: 18px;
 
@@ -337,7 +353,10 @@ iframe {
   justify-content: center;
   align-items: center;
   padding: 0 20px;
-  width: 100%;
+  width: 90%;
+  width: 90%;
+  position: center;
+  margin-left: 27px;
   height: 62px;
   background-color: #827ffe;
   border-radius: 3px;

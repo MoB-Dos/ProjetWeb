@@ -1,6 +1,5 @@
 a.bouton1 {
     color: white;
-
     text-decoration: none;
     font-weight: bold;
     text-align: center;
@@ -8,6 +7,7 @@ a.bouton1 {
   }
   a.bouton1:hover {
     background-color: #fff568;
+    text-decoration: none;
   }
 
   a.bouton2 {
@@ -19,6 +19,7 @@ a.bouton1 {
     }
     a.bouton2:hover {
       background-color: #6495ED;
+      text-decoration: none;
     }
 
     a.bouton3 {
@@ -32,33 +33,47 @@ a.bouton1 {
       }
       a.bouton3:hover {
         background-color: #3b9f42;
+        text-decoration: none;
       }
+
 
 
 .Image{
   width: 100%;
-  height: 100vh;
-  /*background: url(Footer.Nav/Nav/Image/FondBleu.png) no-repeat 50% 50%;*/
+  max-width: 100%;
+  height: auto;
+  /*background: url(Footer.Nav/Nav/Image/FondBleu2.png) no-repeat 50% 50%;*/
   background-size: cover;
+  position: relative;
+  bottom: 1122px;
 }
 
 .btn4{
-  top :590px;
-  left:220px;
+  top :890px;
+  left:380px;
+  border-style: inset;
   position:absolute;
-  margin: auto;
+  width:500px;
+  height:100px;
+  border:1px solid #000;
+  display: inline-block;
+
+
 }
 
 .Widget1{
   margin-right: 30px;
   float: left;
+  margin-bottom: 10px;
 }
 
 .Widget2{
   margin-right: 30px;
   float: left;
+  margin-bottom: 10px;
 }
 
 .Widget3{
-  float: left;
+
+float: left;
 }
