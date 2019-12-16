@@ -41,7 +41,7 @@ a.bouton1 {
 .Image{
   width: 100%;
   max-width: 100%;
-  top:73%; left: 50%;
+  top:50%; left: 50%;
   transform: translate(-50%, -50%);
   height: auto;
   background-size: cover;
@@ -50,7 +50,7 @@ a.bouton1 {
 }
 
 .btn4{
-  top: 150%; left: 50%;
+  top: 120%; left: 50%;
   transform: translate(-50%, -50%);
   border-style: inset;
   position:absolute;

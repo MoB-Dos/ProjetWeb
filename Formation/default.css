@@ -8,7 +8,6 @@ body {
 	margin: 20px 0;
 	padding: 0;
 	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-	color: #333333;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -58,7 +57,7 @@ img {
 
 #logo * {
 	text-align: center;
-	
+
 	text-decoration: none;
 	font-weight: normal;
 	color: #FFFFFF;

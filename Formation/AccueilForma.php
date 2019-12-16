@@ -11,7 +11,12 @@
       <script src="../TemplateConnexion/js/main.js"></script>
 
       <title>Formations</title>
+
+      <?php  require_once('Footer.Nav/Nav/Html.html') ?>
+      <?php  require_once('Footer.Nav/link.php') ?>
+
     </head>
+<body style="background-color:#868686;">
 
     <div class="container-login100-form-btn m-t-17">
       <button class="login100-form-btn" onclick="window.location.href='3eme/3eme.html'">
@@ -48,3 +53,5 @@
         Retour
       </button>
     </div>
+
+</body>
