@@ -4,6 +4,9 @@ session_start();
 $lieneleve = "'../Accueil/AccueilEleve.php'";
 $lienparent = "'../Accueil/AccueilParent.php'";
 $lienadmin = "'../Accueil/AccueilAdmin.php'";
+$modifeleve = "'../Modification/modificationeleve.php'";
+$modifparent = "'../Modification/modificationparent.php'";
+$modifadmin = "'../Modification/modificationadmin.php'";
 //Connexion à la base de donnees projetweb
 try{
 $bdd= new PDO('mysql:host=localhost;dbname=projetweb;charset=utf8','root','');
@@ -23,14 +26,17 @@ foreach ($donne as $value) {
     echo $value['nom']." ".$value['prenom'].'<br><br>'."Mail :"." ".$value['mail'].'<br><br>'."Telephone :"." ".$value['tel'].'<br><br>'."Adresse :"." ".$value['adresse'].'<br><br>'."Etudiant en :"." ".$value['classe'];
     //Bouton de retour
     echo '<br><br><input type="button" value="Retour" onclick="window.location.href='.$lieneleve.'"/>';
+    echo '<br><br><input type="button" value="Modifier" onclick="window.location.href='.$modifeleve.'"/>';
   }
   if($value['profil_id'] == '2'){
     echo $value['nom']." ".$value['prenom'].'<br><br>'."Mail :"." ".$value['mail'].'<br><br>'."Telephone :"." ".$value['tel'].'<br><br>'."Adresse :"." ".$value['adresse'].'<br><br>'."Parent d'un elève en :"." ".$value['classe'];
     echo '<br><br><input type="button" value="Retour" onclick="window.location.href='.$lienparent.'"/>';
+    echo '<br><br><input type="button" value="Modifier" onclick="window.location.href='.$modifparent.'"/>';
   }
   if($value['profil_id'] == '3'){
     echo $value['nom']." ".$value['prenom'].'<br><br>'."Mail :"." ".$value['mail'].'<br><br>'."Telephone :"." ".$value['tel'].'<br><br>'."Adresse :"." ".$value['adresse'].'<br><br>'." "."Administrateur";
     echo '<br><br><input type="button" value="Retour" onclick="window.location.href='.$lienadmin.'"/>';
+    echo '<br><br><input type="button" value="Modifier" onclick="window.location.href='.$modifadmin.'"/>';
   }
 }
 ?>
