@@ -53,7 +53,7 @@ img {
 	float: left;
 	width: 200px;
 	height: 200px;
-	background: url(../Image/fond_formation.jpg);
+	background: url();
 }
 
 #logo * {
@@ -82,7 +82,7 @@ img {
 	float: right;
 	width: 450px;
 	height: 200px;
-	background: url(images/img2.jpg);
+	background: url(../Image/fond_formation.jpg);
 }
 
 #menu ul {
@@ -117,7 +117,7 @@ img {
 
 #colOne {
 	float: left;
-	width: 450px;
+	width: 500px;
 }
 
 #colOne .top-head {
