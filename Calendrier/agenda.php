@@ -452,7 +452,7 @@ $reponse=$bdd->query('SELECT id FROM agenda');
 $donne=$reponse->fetch();
 $vrai_id=$reponse->columnCount()+1;
 //Sélection des données dans la table utilisateur
-for ($id=0; $id<$vrai_id; $id++){
+for ($id=1; $id<$vrai_id; $id++){
 $reponse=$bdd->prepare('SELECT * FROM agenda WHERE id=?');
 $reponse->execute(array($id));
 $donne=$reponse->fetch();
@@ -466,7 +466,7 @@ $heures=$donne['heures'];
 $minutes=$donne['minutes'];
 $event=$donne['event'];
 ?>
-data.push({ title: names[<?php echo $event; ?> % names.length], start: new Date(<?php echo $annee; ?>, <?php echo $mois; ?> , <?php echo $jour; ?>, <?php echo $heures; ?>), end: end, allDay: !(i % 6), text: slipsum[c % slipsum.length ]  });
+data.push({ title: names[<?php echo $event; ?> % names.length], start: new Date(<?php echo $annee; ?>, <?php echo 11; ?> , <?php echo $jour; ?>, <?php echo $heures; ?>), end: end, allDay: !(i % 6), text: slipsum[c % slipsum.length ]  });
 <?php } ?>
 data.push({ title: names[<?php echo 2; ?> % names.length], start: new Date(<?php echo 2019; ?>, <?php echo 11; ?> , <?php echo 1; ?>, <?php echo 12; ?>), end: end, allDay: !(i % 6), text: slipsum[c % slipsum.length ]  });
 data.push({ title: names[<?php echo 1; ?> % names.length], start: new Date(<?php echo 2019; ?>, <?php echo 11; ?> , <?php echo 2; ?>, <?php echo 13; ?>), end: end, allDay: !(i % 6), text: slipsum[c % slipsum.length ]  });
