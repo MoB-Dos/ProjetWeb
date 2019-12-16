@@ -436,36 +436,41 @@ var data = [],
     //data.push({ title: names[c1 % names.length], start: new Date(2019, m, d, h, m), end: end, allDay: !(i % 6), text: slipsum[c % slipsum.length ]  });
     //resumer de ce que je veux faire : base de données ou on saisit les données des events sur l'html puis ici on fait une boucle avec id tant que event est pas 0 (isset)
   }
-<?php $mois=$_POST['mois']; ?>
-  data.push({ title: names[<?php echo $_POST['event'] ?> % names.length], start: new Date(<?php echo $_POST['annee'] ?>, <?php echo $mois; ?> , <?php echo $_POST['jour']; ?>, <?php echo $_POST['heures']; ?>), end: end, allDay: !(i % 6), text: slipsum[c % slipsum.length ]  });
-//janvier = 0
+
 
 
 //Sélection des données dans la table agenda
-for(i = 0; i < 2; i++) {
-  <?php
-  $i=$i+1;
-  try{
-  $bdd= new PDO('mysql:host=localhost;dbname=projetweb;charset=utf8','root','');
-  }
+<?php
+try{
+$bdd= new PDO('mysql:host=localhost;dbname=projetweb;charset=utf8','root','');
+}
 
-  catch(Exception $e){
-    die('Erreur:'.$e->getMessage());
-    }
-
-$reponse=$bdd->prepare ('SELECT * FROM agenda where id=?');
+catch(Exception $e){
+  die('Erreur:'.$e->getMessage());
+}
+$reponse=$bdd->query('SELECT id FROM agenda');
 $donne=$reponse->fetch();
+$vrai_id=$reponse->columnCount()+1;
+//Sélection des données dans la table utilisateur
+for ($id=0; $id<$vrai_id; $id++){
+$reponse=$bdd->prepare('SELECT * FROM agenda WHERE id=?');
+$reponse->execute(array($id));
+$donne=$reponse->fetch();
+
+//$reponse=$bdd->prepare ('SELECT * FROM agenda where id=1');
+//$donne=$reponse->fetch();
 $annee=$donne['annee'];
 $mois=$donne['mois'];
 $jour=$donne['jour'];
 $heures=$donne['heures'];
 $minutes=$donne['minutes'];
-$event_id=$donne['event_id'];
-var_dump($donne);
+$event=$donne['event'];
 ?>
-data.push({ title: names[<?php echo $_POST['event'] ?> % names.length], start: new Date(<?php echo $annee ?>, <?php echo $mois; ?> , <?php echo $jour; ?>, <?php echo $heures; ?>), end: end, allDay: !(i % 6), text: slipsum[c % slipsum.length ]  });
+data.push({ title: names[<?php echo $event; ?> % names.length], start: new Date(<?php echo $annee; ?>, <?php echo $mois; ?> , <?php echo $jour; ?>, <?php echo $heures; ?>), end: end, allDay: !(i % 6), text: slipsum[c % slipsum.length ]  });
+<?php } ?>
+data.push({ title: names[<?php echo 2; ?> % names.length], start: new Date(<?php echo 2019; ?>, <?php echo 11; ?> , <?php echo 1; ?>, <?php echo 12; ?>), end: end, allDay: !(i % 6), text: slipsum[c % slipsum.length ]  });
+data.push({ title: names[<?php echo 1; ?> % names.length], start: new Date(<?php echo 2019; ?>, <?php echo 11; ?> , <?php echo 2; ?>, <?php echo 13; ?>), end: end, allDay: !(i % 6), text: slipsum[c % slipsum.length ]  });
 
-}
 
   data.sort(function(a,b) { return (+a.start) - (+b.start); });
 
