@@ -454,7 +454,6 @@ for(i = 0; i < 2; i++) {
     }
 
 $reponse=$bdd->prepare ('SELECT * FROM agenda where id=?');
-$reponse->execute(array($i));
 $donne=$reponse->fetch();
 $annee=$donne['annee'];
 $mois=$donne['mois'];
