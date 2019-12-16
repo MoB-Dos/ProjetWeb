@@ -41,16 +41,17 @@ a.bouton1 {
 .Image{
   width: 100%;
   max-width: 100%;
+  top:73%; left: 50%;
+  transform: translate(-50%, -50%);
   height: auto;
-  /*background: url(Footer.Nav/Nav/Image/FondBleu2.png) no-repeat 50% 50%;*/
   background-size: cover;
-  position: relative;
-  bottom: 1122px;
+  position: absolute;
+  /*bottom: 1122px;*/
 }
 
 .btn4{
-  top :890px;
-  left:380px;
+  top: 150%; left: 50%;
+  transform: translate(-50%, -50%);
   border-style: inset;
   position:absolute;
   width:500px;

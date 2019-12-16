@@ -31,7 +31,7 @@ Retapez votre mot de passe:
 <input type="password" name="mdp2" required><br><br>
 
 <!--Boutons de validation et de retour-->
-	<input type="button" value="Retour" onclick="window.location.href='../Accueil/AccueilAdmin.php'"/>
+	<input type="button" value="Retour" onclick="window.location.href='../1page.php'"/>
 	<input type="submit" value="Envoyer"/><br><br>
 
 </form>
