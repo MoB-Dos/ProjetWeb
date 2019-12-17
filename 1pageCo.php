@@ -5,7 +5,7 @@
     <title>test</title>
 
   <link rel="stylesheet" href="1page.css">
-  <?php  require_once('Footer.Nav/Nav/Html.html') ?>
+  <?php  require_once('Footer.Nav/Nav/NavCoEleve.html') ?>
   <?php  require_once('Footer.Nav/link.php') ?>
 
   </head>

@@ -28,22 +28,22 @@ $donne=$reponse->fetch();
     //Si les données correspondent au données de la base de données
     if ($donne['nom'] == $_POST['login'] && $donne['mdp'] == md5($_POST['mdp']) && $donne['prenom'] == $_POST['prenom']) {
       //On enregistre login et prénom dans la session
-      
+
       $_SESSION['login'] = $_POST['login'];
       $_SESSION['prenom'] = $_POST['prenom'];
 
       if ($donne['profil_id'] == '1') {
         //Renvoi vers la page AccueilEleve
-        header ('location: http://localhost/Projet/GIT/ProjetWeb/Accueil/AccueilEleve.php');
+        header ('location: http://localhost/Projet/GIT/ProjetWeb/1pageCo.php');
       }
 
       if ($donne['profil_id'] == '2') {
         //Renvoi vers la page AccueilEleve
-        header ('location: http://localhost/Projet/GIT/ProjetWeb/Accueil/AccueilParent.php');
+        header ('location: http://localhost/Projet/GIT/ProjetWeb/1pageCo.php');
       }
       if ($donne['profil_id'] == '3') {
         //Renvoi vers la page AccueilEleve
-        header ('location: http://localhost/Projet/GIT/ProjetWeb/Accueil/AccueilAdmin.php');
+        header ('location: http://localhost/Projet/GIT/ProjetWeb/1pageCoAdmin.php');
       }
 }
     //Sinon on affiche une boite de dialogue d'alerte
