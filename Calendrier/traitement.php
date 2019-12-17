@@ -2,7 +2,7 @@
 //Démarrage de la session
 session_start();
 
-  $annee=$_POST['annee'];
+$annee=$_POST['annee'];
 $mois=$_POST['mois'];
 $jour=$_POST['jour']-1;
 $heures=$_POST['heures'];
@@ -24,14 +24,7 @@ $id=$vrai_id+1;
 var_dump($vrai_id);
   $donne=$reponse->fetch();
   var_dump($donne);
-    $req = $bdd->prepare('INSERT INTO agenda (id, annee, mois, jour, heures, minutes, event) VALUES (?,?,?,?,?,?,?)');
-    $req -> execute(array($id, $annee, $mois, $jour, $heures, $minutes, $event));
+    $req = $bdd->prepare('INSERT INTO agenda (annee, mois, jour, heures, minutes, event) VALUES (?,?,?,?,?,?)');
+    $req -> execute(array($annee, $mois, $jour, $heures, $minutes, $event));
     header("Location: agenda.php");
-    exit;
-  /*}
-
-else {
-  echo 'erreur 404';
-}
-}*/
 ?>

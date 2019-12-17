@@ -136,7 +136,7 @@
                 <td class="{{: date.toDateCssClass() }}">  </td>
               </tr>
               <tr>
-                <th class="timetitle" >Before 6 AM</th>
+                <th class="timetitle" >Avant 6 heures</th>
                 <th class="timetitle" >Tout les jours</th>
                 <td class="{{: date.toDateCssClass() }}">  </td>
               </tr>
@@ -398,7 +398,7 @@ $.extend(Date.prototype, {
     date: (new Date()),
         daycss: ["c-Dimanche", "", "", "", "", "", "c-Samedi"],
         todayname: "Aujourd'hui",
-        thismonthcss: "currently",
+        thismonthcss: "actuelement",
         lastmonthcss: "outside",
         nextmonthcss: "outside",
     mode: "month",
@@ -421,7 +421,7 @@ var data = [],
     h,
     m,
     names = ['Tout les jours sur BOBFM TV', 'Conseil de classe', 'Anniv random', 'Evenement unique', 'formation', 'Reunion', 'Mr. Robert Lenon', 'Conseil intermediaire', 'VA-11-A-11-A'],
-    slipsum = ["Now that we know who you are, I know who I am. I'm not a mistake! It all makes sense! In a comic, you know how you can tell who the arch-villain's going to be? He's the exact opposite of the hero. And most times they're friends, like you and me! I should've known way back when... You know why, David? Because of the kids. They called me Mr Glass.", "You see? It's curious. Ted did figure it out - time travel. And when we get back, we gonna tell everyone. How it's possible, how it's done, what the dangers are. But then why fifty years in the future when the spacecraft encounters a black hole does the computer call it an 'unknown entry event'? Why don't they know? If they don't know, that means we never told anyone. And if we never told anyone it means we never made it back. Hence we die down here. Just as a matter of deductive logic.", "Your bones don't break, mine do. That's clear. Your cells react to bacteria and viruses differently than mine. You don't get sick, I do. That's also clear. But for some reason, you and I react the exact same way to water. We swallow it too fast, we choke. We get some in our lungs, we drown. However unreal it may seem, we are connected, you and I. We're on the same curve, just on opposite ends.", "Well, the way they make shows is, they make one show. That show's called a pilot. Then they show that show to the people who make shows, and on the strength of that one show they decide if they're going to make more shows. Some pilots get picked and become television programs. Some don't, become nothing. She starred in one of the ones that became nothing.", "Yeah, I like animals better than people sometimes... Especially dogs. Dogs are the best. Every time you come home, they act like they haven't seen you in a year. And the good thing about dogs... is they got different dogs for different people. Like pit bulls. The dog of dogs. Pit bull can be the right man's best friend... or the wrong man's worst enemy. You going to give me a dog for a pet, give me a pit bull. Give me... Raoul. Right, Omar? Give me Raoul.", "Like you, I used to think the world was this great place where everybody lived by the same standards I did, then some kid with a nail showed me I was living in his world, a world where chaos rules not order, a world where righteousness is not rewarded. That's Cesar's world, and if you're not willing to play by his rules, then you're gonna have to pay the price.", "You think water moves fast? You should see ice. It moves like it has a mind. Like it knows it killed the world once and got a taste for murder. After the avalanche, it took us a week to climb out. Now, I don't know exactly when we turned on each other, but I know that seven of us survived the slide... and only five made it out. Now we took an oath, that I'm breaking now. We said we'd say it was the snow that killed the other two, but it wasn't. Nature is lethal but it doesn't hold a candle to man.", "You see? It's curious. Ted did figure it out - time travel. And when we get back, we gonna tell everyone. How it's possible, how it's done, what the dangers are. But then why fifty years in the future when the spacecraft encounters a black hole does the computer call it an 'unknown entry event'? Why don't they know? If they don't know, that means we never told anyone. And if we never told anyone it means we never made it back. Hence we die down here. Just as a matter of deductive logic.", "Like you, I used to think the world was this great place where everybody lived by the same standards I did, then some kid with a nail showed me I was living in his world, a world where chaos rules not order, a world where righteousness is not rewarded. That's Cesar's world, and if you're not willing to play by his rules, then you're gonna have to pay the price.", "You think water moves fast? You should see ice. It moves like it has a mind. Like it knows it killed the world once and got a taste for murder. After the avalanche, it took us a week to climb out. Now, I don't know exactly when we turned on each other, but I know that seven of us survived the slide... and only five made it out. Now we took an oath, that I'm breaking now. We said we'd say it was the snow that killed the other two, but it wasn't. Nature is lethal but it doesn't hold a candle to man."];
+    slipsum = [/*"Now that we know who you are, I know who I am. I'm not a mistake! It all makes sense! In a comic, you know how you can tell who the arch-villain's going to be? He's the exact opposite of the hero. And most times they're friends, like you and me! I should've known way back when... You know why, David? Because of the kids. They called me Mr Glass.", "You see? It's curious. Ted did figure it out - time travel. And when we get back, we gonna tell everyone. How it's possible, how it's done, what the dangers are. But then why fifty years in the future when the spacecraft encounters a black hole does the computer call it an 'unknown entry event'? Why don't they know? If they don't know, that means we never told anyone. And if we never told anyone it means we never made it back. Hence we die down here. Just as a matter of deductive logic.", "Your bones don't break, mine do. That's clear. Your cells react to bacteria and viruses differently than mine. You don't get sick, I do. That's also clear. But for some reason, you and I react the exact same way to water. We swallow it too fast, we choke. We get some in our lungs, we drown. However unreal it may seem, we are connected, you and I. We're on the same curve, just on opposite ends.", "Well, the way they make shows is, they make one show. That show's called a pilot. Then they show that show to the people who make shows, and on the strength of that one show they decide if they're going to make more shows. Some pilots get picked and become television programs. Some don't, become nothing. She starred in one of the ones that became nothing.", "Yeah, I like animals better than people sometimes... Especially dogs. Dogs are the best. Every time you come home, they act like they haven't seen you in a year. And the good thing about dogs... is they got different dogs for different people. Like pit bulls. The dog of dogs. Pit bull can be the right man's best friend... or the wrong man's worst enemy. You going to give me a dog for a pet, give me a pit bull. Give me... Raoul. Right, Omar? Give me Raoul.", "Like you, I used to think the world was this great place where everybody lived by the same standards I did, then some kid with a nail showed me I was living in his world, a world where chaos rules not order, a world where righteousness is not rewarded. That's Cesar's world, and if you're not willing to play by his rules, then you're gonna have to pay the price.", "You think water moves fast? You should see ice. It moves like it has a mind. Like it knows it killed the world once and got a taste for murder. After the avalanche, it took us a week to climb out. Now, I don't know exactly when we turned on each other, but I know that seven of us survived the slide... and only five made it out. Now we took an oath, that I'm breaking now. We said we'd say it was the snow that killed the other two, but it wasn't. Nature is lethal but it doesn't hold a candle to man.", "You see? It's curious. Ted did figure it out - time travel. And when we get back, we gonna tell everyone. How it's possible, how it's done, what the dangers are. But then why fifty years in the future when the spacecraft encounters a black hole does the computer call it an 'unknown entry event'? Why don't they know? If they don't know, that means we never told anyone. And if we never told anyone it means we never made it back. Hence we die down here. Just as a matter of deductive logic.", "Like you, I used to think the world was this great place where everybody lived by the same standards I did, then some kid with a nail showed me I was living in his world, a world where chaos rules not order, a world where righteousness is not rewarded. That's Cesar's world, and if you're not willing to play by his rules, then you're gonna have to pay the price.", "You think water moves fast? You should see ice. It moves like it has a mind. Like it knows it killed the world once and got a taste for murder. After the avalanche, it took us a week to climb out. Now, I don't know exactly when we turned on each other, but I know that seven of us survived the slide... and only five made it out. Now we took an oath, that I'm breaking now. We said we'd say it was the snow that killed the other two, but it wasn't. Nature is lethal but it doesn't hold a candle to man."*/];
 
     for(i = 0; i < 500; i++) {
   //  j = Math.max(i % 15 - 10, 0);
@@ -448,11 +448,10 @@ $bdd= new PDO('mysql:host=localhost;dbname=projetweb;charset=utf8','root','');
 catch(Exception $e){
   die('Erreur:'.$e->getMessage());
 }
-$reponse=$bdd->query('SELECT id FROM agenda');
-$donne=$reponse->fetch();
-$vrai_id=$reponse->columnCount()+1;
+$reponse=$bdd->query('SELECT COUNT(id) FROM agenda')->fetchColumn();
+//+1 par ce que on commence à 1
 //Sélection des données dans la table utilisateur
-for ($id=1; $id<$vrai_id; $id++){
+for ($id=1; $id!=$reponse; $id++){
 $reponse=$bdd->prepare('SELECT * FROM agenda WHERE id=?');
 $reponse->execute(array($id));
 $donne=$reponse->fetch();
@@ -466,8 +465,32 @@ $heures=$donne['heures'];
 $minutes=$donne['minutes'];
 $event=$donne['event'];
 ?>
-data.push({ title: names[<?php echo $event; ?> % names.length], start: new Date(<?php echo $annee; ?>, <?php echo 11; ?> , <?php echo $jour; ?>, <?php echo $heures; ?>), end: end, allDay: !(i % 6), text: slipsum[c % slipsum.length ]  });
+data.push({ title: names[<?php echo $event; ?> % names.length], start: new Date(<?php echo $annee; ?>, <?php echo $mois; ?> , <?php echo $jour; ?>, <?php echo $heures; ?>), end: end, allDay: !(i % 6), text: slipsum[c % slipsum.length ]  });
 <?php } ?>
+
+/*while ($i <= 10) {
+  $id=$id+1;
+  if (isset($id)) {
+    exit;
+  }
+  else {
+    $reponse=$bdd->prepare('SELECT * FROM agenda WHERE id=?');
+    $reponse->execute(array($id));
+    $donne=$reponse->fetch();
+
+    //$reponse=$bdd->prepare ('SELECT * FROM agenda where id=1');
+    //$donne=$reponse->fetch();
+    $annee=$donne['annee'];
+    $mois=$donne['mois']+1;
+    $jour=$donne['jour'];
+    $heures=$donne['heures'];
+    $minutes=$donne['minutes'];
+    $event=$donne['event'];
+
+  }
+}
+?>
+*/
 data.push({ title: names[<?php echo 2; ?> % names.length], start: new Date(<?php echo 2019; ?>, <?php echo 11; ?> , <?php echo 1; ?>, <?php echo 12; ?>), end: end, allDay: !(i % 6), text: slipsum[c % slipsum.length ]  });
 data.push({ title: names[<?php echo 1; ?> % names.length], start: new Date(<?php echo 2019; ?>, <?php echo 11; ?> , <?php echo 2; ?>, <?php echo 13; ?>), end: end, allDay: !(i % 6), text: slipsum[c % slipsum.length ]  });
 
