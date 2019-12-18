@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>test</title>
+    <title>Administrateur</title>
 
   <link rel="stylesheet" href="1page.css">
   <?php  require_once('Footer.Nav/Nav/NavCoAdmin.html') ?>

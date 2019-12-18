@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Accueil</title>
+    <title>Robert Schuman</title>
 
   <link rel="stylesheet" href="1page.css">
   <?php  require_once('Footer.Nav/Nav/Html.html') ?>
