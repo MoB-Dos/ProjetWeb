@@ -28,6 +28,7 @@ header {
 .logo {
       line-height: 60px;
       position: fixed;
+
       float: left;
       margin: 10px 35px;
 }
@@ -57,11 +58,6 @@ nav.black ul {
 
 }
 
-nav.Grey ul {
-      background: #000;
-
-
-}
 
 nav ul li {
       display: inline-block;
@@ -71,12 +67,12 @@ nav ul li {
 nav ul li a {
       text-decoration: none;
       color: #fff;
-      font-size: 16px;
+      font-size: 25px;
 }
 
 nav ul li a:hover {
       text-decoration: none;
-      font-size: 16px;
+      font-size: 25px;
       color: #4180CB;
 }
 
