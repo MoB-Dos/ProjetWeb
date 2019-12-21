@@ -38,13 +38,13 @@ color: #a9a9a9;
 
 body, html {
 	height: 100%;
-	font-family: Ubuntu-Regular, sans-serif;
+	/*font-family: Ubuntu-Regular, sans-serif;*/
   background-image: url(images/Fond/1.jpg);
 }
 
 /*---------------------------------------------*/
 a {
-	font-family: Ubuntu-Regular;
+	/*font-family: Ubuntu-Regular;*/
 	font-size: 14px;
 	line-height: 1.7;
 	color: #666666;
@@ -70,7 +70,7 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 p {
-	font-family: Ubuntu-Regular;
+	/*font-family: Ubuntu-Regular;*/
 	font-size: 14px;
 	line-height: 1.7;
 	color: #666666;

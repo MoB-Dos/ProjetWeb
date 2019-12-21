@@ -1,32 +1,38 @@
 a.bouton1 {
     color: white;
     text-decoration: none;
+    background-color:  #6495ED;
     font-weight: bold;
     text-align: center;
     padding: 5px;
+    border-radius: 50px;
   }
   a.bouton1:hover {
-    background-color: #fff568;
+    background-color:  cyan;
     text-decoration: none;
   }
 
   a.bouton2 {
       color: white;
       text-decoration: none;
+      background-color: #6495ED;
       font-weight: bold;
       text-align: center;
       padding: 5px;
+      border-radius: 50px;
     }
     a.bouton2:hover {
-      background-color: #6495ED;
+      background-color: cyan;
       text-decoration: none;
     }
 
     a.bouton3 {
         color: white;
-        background-color: #000080;
+
         background: url(Image/Logo-Pronote.png) no-repeat 50% 50%;
         text-decoration: none;
+        border-radius: 50px;
+        border: 2px;
         font-weight: bold;
         text-align: center;
         padding: 5px;
@@ -71,11 +77,10 @@ a.bouton1 {
 .btn4{
   top: 145%; left: 50%;
   transform: translate(-50%, -50%);
-  border-style: inset;
+
   position:absolute;
   width:500px;
   height:100px;
-  border:3px solid #000;
   display: inline-block;
 
 

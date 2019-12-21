@@ -19,7 +19,7 @@
       <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css'>
       <script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'></script>
       <link rel="stylesheet" href="Footer.Nav/Nav/Css.css">
-      <script  src="./Footer.Nav/Nav/JS.js"></script>
+      <script  src="Footer.Nav/Nav/JS.js"></script>
       <link rel="stylesheet" href="Footer.Nav/Footer/dist/style.css">
 
 
