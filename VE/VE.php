@@ -2,10 +2,7 @@
 <html>
 <head>
   <title>Vie de l'etablissement</title>
-  <?php  require_once('../Footer.Nav/Nav/Html.html') ?>
-  <?php  require_once('../Footer.Nav/link.php') ?>
 
-  
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 * {box-sizing: border-box;}
@@ -141,6 +138,6 @@ function showSlides() {
   setTimeout(showSlides, 5000); // Change image every 2 seconds
 }
 </script>
-<?php  require_once('../Footer.Nav/Footer/dist/index.html') ?>
+
 </body>
 </html>
