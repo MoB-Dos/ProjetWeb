@@ -6,6 +6,7 @@
 <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 <link href="agenda.css" rel="stylesheet" media="all" type="text/css">
 <!--- Include the above in your HEAD tag ---------->
+<!--- Inspirer de plusieurs template --->
 
 <div class="container theme-showcase">
   <h1>Calendrier</h1>
@@ -13,6 +14,7 @@
 </div>
 
 
+<!--- on definit les var et on fait les boutons de l'agenda avec des tables --->
 <script type="text/tmpl" id="tmpl">
   {{
   var date = date || new Date(),
@@ -161,6 +163,7 @@
               {{ } }}
               <tr>
                 <th class="timetitle" >After 10 PM</th>
+                <th class="timetitle" >Après 10 PM</th>
                 <th class="timetitle" >Après 10 heure</th>
                 <td class="time-22-0"> </td>
               </tr>
@@ -191,16 +194,20 @@
 
 //quicktmpl is a simple template language I threw together a while ago; it is not remotely secure to xss and probably has plenty of bugs that I haven't considered, but it basically works
 //the design is a function I read in a blog post by John Resig (http://ejohn.org/blog/javascript-micro-templating/) and it is intended to be loosely translateable to a more comprehensive template language like mustache easily
+//quicktmpl est un template
+//design par John Resig (http://ejohn.org/blog/javascript-micro-templating/)
 $.extend({
     quicktmpl: function (template) {return new Function("obj","var p=[],print=function(){p.push.apply(p,arguments);};with(obj){p.push('"+template.replace(/[\r\t\n]/g," ").split("{{").join("\t").replace(/((^|\}\})[^\t]*)'/g,"$1\r").replace(/\t:(.*?)\}\}/g,"',$1,'").split("\t").join("');").split("}}").join("p.push('").split("\r").join("\\'")+"');}return p.join('');")}
 });
 
 $.extend(Date.prototype, {
   //provides a string that is _year_month_day, intended to be widely usable as a css class
+  //fournit une chaîne qui est _year_month_day, pour être utilisable en tant que classe css
   toDateCssClass:  function () {
     return '_' + this.getFullYear() + '_' + (this.getMonth() + 1) + '_' + this.getDate();
   },
   //this generates a number useful for comparing two dates;
+  //genère 2 nombre pour les heures am et pm;
   toDateInt: function () {
     return ((this.getFullYear()*12) + this.getMonth())*32 + this.getDate();
   },
@@ -222,6 +229,7 @@ $.extend(Date.prototype, {
 (function ($) {
 
   //t here is a function which gets passed an options object and returns a string of html. I am using quicktmpl to create it based on the template located over in the html block
+  //Voici une fonction qui reçoit un objet options et retourne une chaîne html. il utilise quicktmpl pour le créer en fonction du modèle situé dans le bloc html
   var t = $.quicktmpl($('#tmpl').get(0).innerHTML);
 
   function calendar($el, options) {
@@ -392,6 +400,7 @@ $.extend(Date.prototype, {
       }
     });
   })({
+  })({ //on définit les jour, mois et abrévation (pour l'onglet année)
     days: ["Dimanche", "Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi"],
     months: ["Janvier", "Fevrier", "Mars", "Avril", "Mai", "Jun", "Jullet", "Aout", "Septembre", "Octobre", "Novembre", "Decembre"],
     shortMonths: ["Jan", "Fev", "Mar", "Avr", "Mai", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
@@ -421,9 +430,11 @@ var data = [],
     h,
     m,
     names = ['Tout les jours sur BOBFM TV', 'Conseil de classe', 'Anniv random', 'Evenement unique', 'formation', 'Reunion', 'Mr. Robert Lenon', 'Conseil intermediaire', 'VA-11-A-11-A'],
+    names = ['Examen Blanc', 'Conseil de classe', 'Examen officiel', 'Partiel', 'formation', 'Reunion', 'Sortie scolaire', 'Conseil intermediaire', 'noël'],
     slipsum = [/*"Now that we know who you are, I know who I am. I'm not a mistake! It all makes sense! In a comic, you know how you can tell who the arch-villain's going to be? He's the exact opposite of the hero. And most times they're friends, like you and me! I should've known way back when... You know why, David? Because of the kids. They called me Mr Glass.", "You see? It's curious. Ted did figure it out - time travel. And when we get back, we gonna tell everyone. How it's possible, how it's done, what the dangers are. But then why fifty years in the future when the spacecraft encounters a black hole does the computer call it an 'unknown entry event'? Why don't they know? If they don't know, that means we never told anyone. And if we never told anyone it means we never made it back. Hence we die down here. Just as a matter of deductive logic.", "Your bones don't break, mine do. That's clear. Your cells react to bacteria and viruses differently than mine. You don't get sick, I do. That's also clear. But for some reason, you and I react the exact same way to water. We swallow it too fast, we choke. We get some in our lungs, we drown. However unreal it may seem, we are connected, you and I. We're on the same curve, just on opposite ends.", "Well, the way they make shows is, they make one show. That show's called a pilot. Then they show that show to the people who make shows, and on the strength of that one show they decide if they're going to make more shows. Some pilots get picked and become television programs. Some don't, become nothing. She starred in one of the ones that became nothing.", "Yeah, I like animals better than people sometimes... Especially dogs. Dogs are the best. Every time you come home, they act like they haven't seen you in a year. And the good thing about dogs... is they got different dogs for different people. Like pit bulls. The dog of dogs. Pit bull can be the right man's best friend... or the wrong man's worst enemy. You going to give me a dog for a pet, give me a pit bull. Give me... Raoul. Right, Omar? Give me Raoul.", "Like you, I used to think the world was this great place where everybody lived by the same standards I did, then some kid with a nail showed me I was living in his world, a world where chaos rules not order, a world where righteousness is not rewarded. That's Cesar's world, and if you're not willing to play by his rules, then you're gonna have to pay the price.", "You think water moves fast? You should see ice. It moves like it has a mind. Like it knows it killed the world once and got a taste for murder. After the avalanche, it took us a week to climb out. Now, I don't know exactly when we turned on each other, but I know that seven of us survived the slide... and only five made it out. Now we took an oath, that I'm breaking now. We said we'd say it was the snow that killed the other two, but it wasn't. Nature is lethal but it doesn't hold a candle to man.", "You see? It's curious. Ted did figure it out - time travel. And when we get back, we gonna tell everyone. How it's possible, how it's done, what the dangers are. But then why fifty years in the future when the spacecraft encounters a black hole does the computer call it an 'unknown entry event'? Why don't they know? If they don't know, that means we never told anyone. And if we never told anyone it means we never made it back. Hence we die down here. Just as a matter of deductive logic.", "Like you, I used to think the world was this great place where everybody lived by the same standards I did, then some kid with a nail showed me I was living in his world, a world where chaos rules not order, a world where righteousness is not rewarded. That's Cesar's world, and if you're not willing to play by his rules, then you're gonna have to pay the price.", "You think water moves fast? You should see ice. It moves like it has a mind. Like it knows it killed the world once and got a taste for murder. After the avalanche, it took us a week to climb out. Now, I don't know exactly when we turned on each other, but I know that seven of us survived the slide... and only five made it out. Now we took an oath, that I'm breaking now. We said we'd say it was the snow that killed the other two, but it wasn't. Nature is lethal but it doesn't hold a candle to man."*/];
 
     for(i = 0; i < 500; i++) {
+    for(i = 0; i < 500; i++) { //boucle pour créer l'agenda sans événement
   //  j = Math.max(i % 15 - 10, 0);
   //  c and c1 jump around to provide an illusion of random data
   //  c = (c * 1063) % 1061;
@@ -440,6 +451,7 @@ var data = [],
 
 
 //Sélection des données dans la table agenda
+//Sélection des données des événelent dans la table agenda
 <?php
 try{
 $bdd= new PDO('mysql:host=localhost;dbname=projetweb;charset=utf8','root','');
@@ -452,8 +464,11 @@ $reponse=$bdd->query('SELECT COUNT(id) FROM agenda')->fetchColumn();
 //+1 par ce que on commence à 1
 //Sélection des données dans la table utilisateur
 for ($id=1; $id!=$reponse; $id++){
+//Sélection du nombre d'id de la table agenda
+for ($id=1; $id!=$reponse; $id++){ //on boucle le avec le nombre total d'id de la table agenda
 $reponse=$bdd->prepare('SELECT * FROM agenda WHERE id=?');
 $reponse->execute(array($id));
+$reponse->execute(array($id));//Sélection des données dans la table agenda ou id=$id
 $donne=$reponse->fetch();
 
 //$reponse=$bdd->prepare ('SELECT * FROM agenda where id=1');
@@ -461,8 +476,11 @@ $donne=$reponse->fetch();
 $annee=$donne['annee'];
 $mois=$donne['mois'];
 $jour=$donne['jour'];
+$mois=$donne['mois']-1; // -
+$jour=$donne['jour']; //on definit cela à chaque boucle pour pouvoir saisir ces informations  dans le data push en bas
 $heures=$donne['heures'];
 $minutes=$donne['minutes'];
+$minutes=$donne['minutes']; //optionel
 $event=$donne['event'];
 ?>
 data.push({ title: names[<?php echo $event; ?> % names.length], start: new Date(<?php echo $annee; ?>, <?php echo $mois; ?> , <?php echo $jour; ?>, <?php echo $heures; ?>), end: end, allDay: !(i % 6), text: slipsum[c % slipsum.length ]  });
@@ -493,6 +511,9 @@ data.push({ title: names[<?php echo $event; ?> % names.length], start: new Date(
 */
 data.push({ title: names[<?php echo 2; ?> % names.length], start: new Date(<?php echo 2019; ?>, <?php echo 11; ?> , <?php echo 1; ?>, <?php echo 12; ?>), end: end, allDay: !(i % 6), text: slipsum[c % slipsum.length ]  });
 data.push({ title: names[<?php echo 1; ?> % names.length], start: new Date(<?php echo 2019; ?>, <?php echo 11; ?> , <?php echo 2; ?>, <?php echo 13; ?>), end: end, allDay: !(i % 6), text: slipsum[c % slipsum.length ]  });
+//pour définir des événement dont la date est permanente tel que noël
+data.push({ title: names[<?php echo 9; ?> % names.length], start: new Date(<?php echo 2019; ?>, <?php echo 11; ?> , <?php echo 24 ?>, <?php echo 12; ?>), end: end, allDay: !(i % 6), text: slipsum[c % slipsum.length ]  });
+data.push({ title: names[<?php echo 1; ?> % names.length], start: new Date(<?php echo 2020; ?>, <?php echo 1; ?> , <?php echo 1; ?>, <?php echo 13; ?>), end: end, allDay: !(i % 6), text: slipsum[c % slipsum.length ]  });
 
 
   data.sort(function(a,b) { return (+a.start) - (+b.start); });
@@ -500,6 +521,7 @@ data.push({ title: names[<?php echo 1; ?> % names.length], start: new Date(<?php
 //data must be sorted by start date
 
 //Actually do everything
+//fin
 $('#holder').calendar({
   data: data
 });
