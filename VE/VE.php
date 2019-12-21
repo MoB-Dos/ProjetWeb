@@ -2,6 +2,8 @@
 <html>
 <head>
   <title>Vie de l'etablissement</title>
+  <?php  require_once('../Footer.Nav/Nav/Html.html') ?>
+  <?php  require_once('../Footer.Nav/link.php') ?>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 * {box-sizing: border-box;}
