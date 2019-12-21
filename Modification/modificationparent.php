@@ -61,7 +61,7 @@ $donnee = $req->fetch();
 Votre profil : Parent <br><br>
 
 <!-- Boutons de validation et de retour-->
-<input type="button" value="Retour" onclick="window.location.href='../Accueil/AccueilParent.php'"/>
+<input type="button" value="Retour" onclick="window.location.href='../1PageCoParent.php'"/>
 
 	<input type="submit" value="Envoyer"/>
 

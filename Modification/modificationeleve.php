@@ -61,7 +61,7 @@ $donnee = $req->fetch();
 Votre profil : Etudiant <br><br>
 
 <!-- Boutons de validation et de retour-->
-<input type="button" value="Retour" onclick="window.location.href='../Accueil/AccueilEleve.php'"/>
+<input type="button" value="Retour" onclick="window.location.href='../1PageCoEleve.php'"/>
 
 	<input type="submit" value="Envoyer"/>
 

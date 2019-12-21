@@ -42,7 +42,7 @@ $donnee = $req->fetch();
 Votre profil : Administrateur<br><br>
 
 <!-- Boutons de validation et de retour-->
-<input type="button" value="Retour" onclick="window.location.href='../Accueil/AccueilAdmin.php'"/>
+<input type="button" value="Retour" onclick="window.location.href='../1PageCoAdmin.php'"/>
 
 
 

@@ -1,6 +1,7 @@
 <?php
 //Démarrage de la session
 session_start ();
+
 //Connexion à la base de données projetweb
 try{
 $bdd= new PDO('mysql:host=localhost;dbname=projetweb;charset=utf8','root','');
@@ -34,12 +35,12 @@ $donne=$reponse->fetch();
 
       if ($donne['profil_id'] == '1') {
         //Renvoi vers la page AccueilEleve
-        header ('location: http://localhost/Projet/GIT/ProjetWeb/1pageCo.php');
+        header ('location: http://localhost/Projet/GIT/ProjetWeb/1pageCoEleve.php');
       }
 
       if ($donne['profil_id'] == '2') {
         //Renvoi vers la page AccueilEleve
-        header ('location: http://localhost/Projet/GIT/ProjetWeb/1pageCo.php');
+        header ('location: http://localhost/Projet/GIT/ProjetWeb/1pageCoParent.php');
       }
       if ($donne['profil_id'] == '3') {
         //Renvoi vers la page AccueilEleve

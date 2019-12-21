@@ -5,11 +5,12 @@
     <title>Accueil</title>
 
   <link rel="stylesheet" href="1page.css">
-  <?php  require_once('Footer.Nav/Nav/NavCoEleve.html') ?>
+  <?php  require_once('Footer.Nav/Nav/NavCoParent.html') ?>
   <?php  require_once('Footer.Nav/link.php') ?>
 
   </head>
   <body style="background-color : white">
+    
 
     <img class="Image"
      src="Footer.Nav/Nav/Image/FondBleu2.png"
