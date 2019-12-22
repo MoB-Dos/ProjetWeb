@@ -6,7 +6,7 @@
     <?php  require_once('Footer.Nav/Nav/Html.html') ?>
     <?php  require_once('Footer.Nav/link.php') ?>
   </head>
-  <body style="background-color:white;">
+  <body style="background-color:lightblue;">
 
 <p class="premiertexte">
 Ici vous allez pouvoir retrouver toute les information sur les alternances, les agendas </br>

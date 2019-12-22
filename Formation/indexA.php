@@ -8,8 +8,7 @@
 <meta name="description" content="" />
 <link href="default.css" rel="stylesheet" type="text/css" />
 
-<?php  require_once('../Footer.Nav/Nav/NavCoAdmin.html') ?>
-<?php  require_once('../Footer.Nav/link.php') ?>
+
 
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
@@ -76,6 +75,6 @@
 
 </div>
 
-<?php  require_once('../Footer.Nav/Footer/dist/index.html') ?>
+
 </body>
 </html>

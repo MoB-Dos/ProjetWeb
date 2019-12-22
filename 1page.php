@@ -23,14 +23,19 @@
        src="Image/DUGNY02.jpg"
        alt="3">
 
+
+<div class="text">
+<p>sur ce site vous allez pouvoir</br>
+   retourver plein de chose fantastique</br>
+commencez par regarder nos projet </br>
+realise </p>
+</div>
+
   <div class="btn4">
 
     <div class="col-xs 3">
 
-
-      <div class="Widget1"><a href="Informationstage.php" class="bouton1"style="width:500px;height:100px;display : inline-block"><p style="color:#0c57a0;font-size: 3em;text-decoration:none">Information Stage</p></a></div>
-
-      <div class="Widget2"><a href="Projet.php" class="bouton2" style="width:500px;height:100px;display : inline-block"><p style="color:#0c57a0;font-size: 3em;">Projet Réalisés</p></a></div>
+      <div class="Widget2"><a href="VieEtab/VieEtab.php" class="bouton2" style="width:500px;height:100px;display : inline-block"><p style="color:#0c57a0;font-size: 3em;">Projet Réalisés</p></a></div>
 
       <div class="Widget3"><a href="https://0931573e.index-education.net/pronote/" class="bouton3" style="width:500px;height:100px;display : inline-block"></a></div>
 

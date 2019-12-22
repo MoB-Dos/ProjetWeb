@@ -21,7 +21,7 @@
     <script  src="Footer.Nav/Nav/JS.js"></script>
     <link rel="stylesheet" href="Footer.Nav/Footer/dist/style.css">
   </head>
-  <body style="background-color:white;">
+  <body style="background-color:lightblue;">
 
 <p class="premiertexte">
 Ici vous allez pouvoir retrouver toute les information sur les alternances, les agendas </br>

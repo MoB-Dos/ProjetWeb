@@ -8,8 +8,7 @@
 <meta name="description" content="" />
 <link href="default.css" rel="stylesheet" type="text/css" />
 
-<?php  require_once('../Footer.Nav/Nav/Html.html') ?>
-<?php  require_once('../Footer.Nav/link.php') ?>
+
 
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
@@ -49,7 +48,7 @@
 <div id="content">
   <div id="colOne">
       <h2 class="top-head">Bienvenue chez Robert Schuman!</h2>
-  
+
         <div class="content">
           Robert Schuman est ravi de vous recevoir et compte bien vous voir faire partie de nos élèves! </br> </br>
           <ul>
@@ -76,6 +75,6 @@
 
 </div>
 
-<?php  require_once('../Footer.Nav/Footer/dist/index.html') ?>
+
 </body>
 </html>

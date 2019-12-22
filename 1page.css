@@ -42,7 +42,16 @@ a.bouton1 {
         text-decoration: none;
       }
 
+.text{
+  top: 120%; left: 50%;
+  transform: translate(-50%, -50%);
+  position:absolute;
+  font-size: 30px;
+  width: 100%;
+  text-align: center;
+  color: black;
 
+}
 
 .Image{
   width: 100%;
