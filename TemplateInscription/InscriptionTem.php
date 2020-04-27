@@ -90,7 +90,7 @@
 
 					<!--Classe===============================================================================================-->
 					<div class="wrap-input100 validate-input m-b-16" style="background-color:white;margin-bottom: -30px;">
-						<select name="classe" class="input100" style="border : none;background-color: #e6e6e6;">
+						<select  class="input100" style="border : none;background-color: #e6e6e6;">
 							<option value="0" selected disabled style="color: #bbbbbb;">choissisez votre Classe !</option>
 						<?php
 						try{
